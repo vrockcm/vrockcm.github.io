@@ -79,4 +79,6 @@ jQuery_1(window).load(function(){
 $(window).scroll(function(){
     $("#me").css("opacity", 1 - $(window).scrollTop() / 550);
   });
-
+$(window).scroll(function(){
+    $(".name-ani").css("opacity", 1 - $(window).scrollTop() / 550);
+  });
