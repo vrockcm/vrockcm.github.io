@@ -57,14 +57,6 @@ jQuery_1(window).load(function(){
 		jQuery_1('#scroll-animate-main').css({
 			'top' : '-' + scroll + 'px'
 		});
-
-		 //Creating sensation of parallax in the header bg.
-		jQuery_1('header').css({
-			'background-position-y' :  0 - (scroll * 600 / heightDocument) + 'px'
-		});
-
-	
-
 		jQuery_1('footer').css({
 			'background-position-y' : 100 - (scroll * 600 / heightDocument) + 'px'
 		});//
