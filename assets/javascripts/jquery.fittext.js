@@ -35,7 +35,9 @@
 
       // Call on resize. Opera debounces their resize by default.
       jQuery_1(window).on('resize.fittext orientationchange.fittext', resizer);
-
+      jQuery_1(window).ready(function(){
+        resizer();
+      });
     });
 
   };
