@@ -22,14 +22,33 @@ function setHeiHeight() {
     });
 }
 setHeiHeight(); // window height on first page loading
-$(window).resize( setHeiHeight );
+$( window ).resize(function() {
+	setHeiHeight();
+	var windowHeight	= jQuery_1(window).height(),
+		windowWidth		= $( window ).width();
+
+  	var heightH = windowHeight;
+	var widthH =  ((windowHeight*4)/3);
+		if(widthH<windowWidth){
+			while(widthH<windowWidth){
+				widthH=widthH+50;
+				heightH = ((widthH*3)/4);
+			}
+		}
+		
+	jQuery_1('header').css({
+		'background-size' :  widthH+'px '+ heightH + 'px',
+	});
+});
 
 
 // Start Action to load the whole page
 jQuery_1(window).load(function(){
 	var windowHeight	= jQuery_1(window).height(),
+		windowWidth		= $( window ).width();
 		footerHeight	= jQuery_1('footer').height(),
 		heightDocument	= (windowHeight) + (jQuery_1('.content').height()) + (jQuery_1('footer').height());
+
 
 	// Defining the size of the element to animate
 	jQuery_1('#scroll-animate, #scroll-animate-main').css({
@@ -37,9 +56,18 @@ jQuery_1(window).load(function(){
 	});
 
 	// Defining the size of the header and content elements
+		var heightH = windowHeight;
+		var widthH =  ((windowHeight*4)/3);
+		if(widthH<windowWidth){
+			while(widthH<windowWidth){
+				widthH=widthH+50;
+				heightH = ((widthH*3)/4);
+			}
+		}
+		
 	jQuery_1('header').css({
 		'height' : windowHeight + 'px',
-		'line-height' : windowHeight + 'px'
+		'background-size' :  widthH+'px '+ heightH + 'px',
 	});
 
 	jQuery_1('.wrapper-parallax').css({
@@ -60,7 +88,9 @@ jQuery_1(window).load(function(){
 		jQuery_1('footer').css({
 			'background-position-y' : 100 - (scroll * 600 / heightDocument) + 'px'
 		});//
-
+		jQuery_1('header').css({
+            'background-position' : 'center ' + (- scroll * 300 / heightDocument) + 'px'  
+        });
 		// On scrolling using function scrollFooter() to verify the position of the scroll and hide the footer
 		scrollFooter(scroll, footerHeight);
 	};
