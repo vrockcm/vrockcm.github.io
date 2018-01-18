@@ -33,26 +33,32 @@
 	</head>
 
 	<body>
-
+          	<div class="bookshelf_wrapper">
+			  <ul class="books_list">
+			    <li class="book_item first"></li>
+			    <li class="book_item second"></li>
+			    <li class="book_item third"></li>
+			    <li class="book_item fourth"></li>
+			    <li class="book_item fifth"></li>
+			    <li class="book_item sixth"></li>
+			  </ul>
+			  <div class="shelf"></div>
+			</div>
 		<div id="scroll-animate">
 			<div id="scroll-animate-main">
 				<div class="wrapper-parallax">
-					<section class="my-icon">
-						<img class="img-responsive  center-block" data-anijs="if: load, on: window, do: rubberBand animated; if: mouseenter, do:bounce animated;" id="me" src="assets/images/ME.png">
-						<div class="name-ani">
-							<span id="fittext4"  >DHRUV SHETH</span>
-						</div>
-						  
-
-						<div class='icon-scroll' data-anijs="if: load, on: window, do:fadeInUp animated;" style="z-index:2; bottom: 0; max-height:400px;max-width:400px;"></div>											
-				    </section>
 					<header>
-								
+						
+							<div class="my-icon name-ani">
+							<span id="fittext4" >DHRUV SHETH</span>
+							</div>									
+						<div class='icon-scroll' data-anijs="if: load, on: window, do:fadeInUp animated;" style="z-index:2; bottom: 0; max-height:400px;max-width:400px;"></div>	
 
-							<video class="bv-video" muted></video>										 						    
-						   
-						    	
-					</header>		      						      		
+			        </header>
+
+
+
+
 					<section class="content" >
 						<div class="container">							
   									 <div class= "content-heading">
@@ -127,28 +133,28 @@
 		<script type="text/javascript" src="assets/javascripts/jquery.fittext.js"></script>
 		<script src="https://anijs.github.io/lib/anijs/anijs-min.js"></script> 
 		<script src="https://anijs.github.io/lib/anijs/helpers/dom/anijs-helper-dom-min.js"></script>
-		
 		<script src="https://anijs.github.io/lib/anijs/helpers/scrollreveal/anijs-helper-scrollreveal.js"></script>
 		</script> 
 		<script type="text/javascript">
 		$("#fittext1").fitText(1.2, { minFontSize: '40px', maxFontSize: '100px' });
 		$("#fittext2").fitText(1.2, { minFontSize: '35px', maxFontSize: '120px' });
 		$("#fittext3").fitText(1.9, { minFontSize: '20px', maxFontSize: '25px' });
-		$("#fittext4").fitText(1.9, { minFontSize: '60px', maxFontSize: '200px' });
+		$("#fittext4").fitText(1.6, { minFontSize: '50px', maxFontSize: '200px' });
 		</script>
 		<script type="text/javascript" src="assets/javascripts/content-data.js"></script>
-		<script src="assets/javascripts/backgroundVideo.js"></script>
-  		<script>
-		    const backgroundVideo = new BackgroundVideo('.bv-video', {
-		      src: [
-		        'assets/videos/blehTrim.mp4'
-		      ],
-		      onReady: function () {
-		        // Use onReady() to prevent flickers or force loading state
-		        const vidParent = document.querySelector(`.${this.bvVideoWrapClass}`);
-		        vidParent.classList.add('bv-video-wrap--ready');
-		      }
-		    });
-		</script>
+		<script>
+            $(document).ready(function() {
+            //Preloader
+            $(window).on('load', function(){
+            preloaderFadeOutTime = 500;
+            function hidePreloader() {
+            var preloader = $('.bookshelf_wrapper');
+            preloader.fadeOut(preloaderFadeOutTime);
+            }
+            hidePreloader();
+            });
+            });
+        </script>
+
 	</body>
 </html>
