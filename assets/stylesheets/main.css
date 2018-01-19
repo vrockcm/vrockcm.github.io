@@ -299,12 +299,19 @@ body {
 
 
 
-
 /*Pre-Loader*/
+.wrapper_pre{
+  background-color: #363636;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 999999;
+}
 .bookshelf_wrapper {
   position: absolute;
   top: 60%;
   left: 50%;
+  z-index: 999999;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
@@ -454,6 +461,7 @@ body {
   width: 300px;
   height: 5px;
   margin: 0 auto;
+  z-index: 999999;
   background-color: white;
   position: relative;
 }
