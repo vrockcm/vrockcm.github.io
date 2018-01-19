@@ -35,6 +35,7 @@
 	</head>
 
 	<body>
+          	<div class="wrapper_pre">
           	<div class="bookshelf_wrapper">
 			  <ul class="books_list">
 			    <li class="book_item first"></li>
@@ -46,6 +47,7 @@
 			  </ul>
 			  <div class="shelf"></div>
 			</div>
+		</div>
 		<div id="scroll-animate">
 			<div id="scroll-animate-main">
 				<div class="wrapper-parallax">
@@ -150,7 +152,7 @@
             $(window).on('load', function(){
             preloaderFadeOutTime = 500;
             function hidePreloader() {
-            var preloader = $('.bookshelf_wrapper');
+            var preloader = $('.wrapper_pre');
             preloader.fadeOut(preloaderFadeOutTime);
             }
             hidePreloader();
