@@ -28,22 +28,23 @@ $( window ).resize(function() {
 		windowWidth		= $( window ).width();
   	var heightH = windowHeight;
 	var widthH =  ((windowHeight*4)/3);
-
-		if(widthH<windowWidth){
-			while(widthH<windowWidth){
+		while(widthH<windowWidth){
 				widthH=widthH+50;
 				heightH = ((widthH*3)/4);
 			}
-		}
-		var heightH1 = windowHeight;
-		var widthH1 =  ((windowHeight*16)/9);
-		if(widthH1<windowWidth){
-			while(widthH1<windowWidth){
-				widthH1=widthH+20;
-				heightH1 = ((widthH*9)/16);
-			}
-		}
-		
+	var background = new Image();
+	background.src = jQuery_1('.skill-parallax').css('background-image').replace('url(','').replace(')','').replace(/\"/gi, "");
+
+    var widthH1 = background.width,
+        heightH1 = background.height;
+
+    var heightH2 = jQuery_1('.skill-parallax').height();
+	var widthH2 =  $( window ).width();
+
+	while(heightH1<heightH2 || widthH1<widthH2){
+			heightH1=heightH1+50;
+			widthH1 =  ((heightH1*16)/9);
+	}	
 	jQuery_1('header').css({
 		'background-size' :  widthH+'px '+ heightH + 'px',
 	});
@@ -74,20 +75,22 @@ jQuery_1(window).load(function(){
 	// Defining the size of the header and content elements
 		var heightH = windowHeight;
 		var widthH =  ((windowHeight*4)/3);
-		if(widthH<windowWidth){
 			while(widthH<windowWidth){
 				widthH=widthH+50;
 				heightH = ((widthH*3)/4);
 			}
-		}
-		var heightH1 = windowHeight;
-		var widthH1 =  ((windowHeight*16)/9);
-		if(widthH1<windowWidth){
-			while(widthH1<windowWidth){
-				widthH1=widthH+20;
-				heightH1 = ((widthH*9)/16);
-			}
-		}		
+    var background = new Image();
+	background.src = jQuery_1('.skill-parallax').css('background-image').replace('url(','').replace(')','').replace(/\"/gi, "");
+
+    var widthH1 = background.width,
+        heightH1 = background.height;
+    var heightH2 = jQuery_1('.skill-parallax').height();
+	var widthH2 =  $( window ).width();
+
+	while(heightH1<heightH2 || widthH1<widthH2){
+			heightH1=heightH1+50;
+			widthH1 =  ((heightH1*16)/9);
+	}
 	jQuery_1('header').css({
 		'height' : windowHeight + 'px',
 		'background-size' :  widthH+'px '+ heightH + 'px',
@@ -120,7 +123,7 @@ jQuery_1(window).load(function(){
             'background-position' : 'center ' + (- scroll * 300 / heightDocument) + 'px'  
         });
         jQuery_1('.skill-parallax').css({
-            'background-position' : 'center ' + ((- scroll * 500) / (heightDocument)) + 'px',
+            'background-position' : 'center ' + ((- scroll * 800) / (heightDocument)) + 'px',
             'background-size' :  widthH1+'px '+ heightH1 + 'px',
         });
 		// On scrolling using function scrollFooter() to verify the position of the scroll and hide the footer
