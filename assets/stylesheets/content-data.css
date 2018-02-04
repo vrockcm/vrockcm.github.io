@@ -662,29 +662,35 @@
           animation-delay: 0s;
 }
 .container {
-    height: 100%;
     padding:30px;
     width: 100%
   
 }
-div.content-heading{
+.content-heading{
   position: relative;
-  padding: 30px;
-  top:40px;
   font-family: 'Montserrat';
-  letter-spacing: 1em;
+  letter-spacing: 2px;
   font-size: 1em;
   line-height: 1;
   width: 100%;
-  font-weight: 400;
+  padding: 50px;
   text-rendering: optimizeLegibility;
+  font-weight: 500; 
+  text-align: center; 
+  text-shadow: rgb(0, 0, 0) 0px 0px 18px;
 }
-@media screen and (max-width: 992px) {
-    .heading{  
-        text-align: center;
-    }
+.skills-heading{
+    position: relative;
+    padding: 50px;
+    font-family: 'Montserrat';
+    letter-spacing: 2px;
+    line-height: 1;
+    width: 100%;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    font-weight: 500; 
+    text-align: center; 
 }
-
 .txt {
   display: block;
 }

@@ -17,14 +17,12 @@
 		</script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<script src="https://use.fontawesome.com/13020ae3f0.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="assets/stylesheets/normalize.css">
+		<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="assets/stylesheets/main.css?v=1.2">
 		<link rel="stylesheet" type="text/css" href="assets/stylesheets/animate.css">
 	    <link rel="stylesheet" type="text/css" href="assets/stylesheets/content-data.css">
 	    <link rel="stylesheet" type="text/css" href="assets/stylesheets/socials.css">
-	    <link rel="stylesheet" type="text/css" href="assets/stylesheets/name.css">
 	    <link rel="stylesheet" type="text/css" href="assets/stylesheets/anicollection.css">
 	    <link rel="icon" type="image/icon" href="favicon.ico">
 	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -48,6 +46,29 @@
 			  <div class="shelf"></div>
 			</div>
 		</div>
+		<div class="main_h">
+
+				    <div class="row">
+			        <a class="logo" href="#">D/S</a>
+
+			        <div class="mobile-toggle">
+			            <span></span>
+			            <span></span>
+			            <span></span>
+			        </div>
+
+			        <nav>
+			            <ul>
+			                <li><a href=".content">ABOUT</a></li>
+			                <li><a href=".skill-parallax">SKILLS & INTERESTS</a></li>
+			                <li><a href="#projects">PROJECTS</a></li>
+			                <li><a href="#achievements">ACHIEVEMENTS</a></li>
+			            </ul>
+			        </nav>
+
+			    </div> <!-- / row -->
+
+		</div>
 		<div id="scroll-animate">
 			<div id="scroll-animate-main">
 				<div class="wrapper-parallax">
@@ -56,37 +77,214 @@
 							<div class="my-icon name-ani">
 							<span id="fittext4" >DHRUV SHETH</span>
 							</div>									
-						<div class='icon-scroll' data-anijs="if: load, on: window, do:fadeInUp animated;" style="z-index:2; bottom: 0; max-height:400px;max-width:400px;"></div>	
+						<div class='icon-scroll' data-anijs="if: load, on: window, do:fadeInUp animated;"></div>	
 
 			        </header>
-
-
-
 
 					<section class="content" >
 						<div class="container">							
   									 <div class= "content-heading">
-
-									 <span id="fittext1" data-anijs="if: scroll, on: window, do: bounceIn animated, before: $scrollReveal" class="txt anim-text-flow deepshadow" style="font-weight: 500; text-align: center; ">ABOUT</span>
-								     
-				 						 <!--<span id="fittext3" class="txt anim-text-flow" style="font-weight: 300;  letter-spacing: 0em; text-shadow: 0px 0px 18px rgba(0, 0, 0, 1); margin-top: 150px">smart + geek + curious + cunning = ME </span>!-->
+									 <span id="fittext1" class="txt anim-text-flow" >ABOUT</span>
 				 					 </div>
-				 				<div class="row"  style="position: relative; top:130px; ">
-				 					<div class="col-md-6 col-centered" style="height: auto;">
+				 				<div class="row row-height" style="position: relative; ">
+				 					<div class="col-lg-6 col-centered" style="height: auto;">
 										<div class="wrapper">
 											<img src="assets/images/OLDME.png"  class="circle img-circle img-responsive" id="OLDME" alt="Responsive image" >
 										</div>
 									</div>
-  									<div class="col-md-6 col-centered" style="height: auto; padding-top: 20px">
-  									<div class="wrapper-text" data-anijs="if: mouseenter, do: pulse animated;" style="position: relative;text-shadow: 0px 0px 18px rgba(0, 0, 0, 1); ">
-  										<span id="fittext3" >Hi! I'm Dhruv. I'm pursuing Bachelors in Computer Science at Stony Brook University. I am the CTO and Co-Founder of Caper which is an events based social networking mobile app exclusively for college. I like to code, play video games and listen to music in my free time. </span>
+  									<div class="col-lg-6 col-centered" style="height: auto;" id="bio">
+  									<div class="wrapper-text text-column-center" >
+  										<span id="fittext3" >Dhruv Sheth is a Software Developer and Entrepreneur based in New York. He is pursuing Bachelors in Computer Science at Stony Brook University. He primarily uses Java for programming and likes to make real-world computer applications. He is also a self taught web designer and likes to keep himself busy with work by learning new things. When he isn't glued to his computer screen, he spends time playing video games and listening to music.</span>
+
   								    </div>
 									</div>
 								</div>
-						</div>		
-					  		
-					</section>
+						</div>
 
+						<section id="skills" class="SkillInterests">
+						<div class="skill-parallax">
+									<center>								
+										<div class= "skills-heading">
+										 		<span id="fittext6" class="skill anim-text-flow" style="display: block; width: 100%;"> </span>
+				 					 	</div>
+				 					 </center>
+				 					 <div class="container-fluid">
+				 					 	<div class="row" style="padding-bottom: 70px;" >
+	  									<div class="col-lg-4">
+	  										<div class="wrapper-text" >
+	  										<h1 id="skill1">Programming Languages</h1>
+	  										<ul style="display:inline-block;vertical-align:middle; text-align: left; font-size: 25px;">
+  												<li>Java</li>
+  												<li>C</li>
+ 												<li>MIPS Assembly</li>
+											</ul>
+	  								        </div>
+										</div>
+										<div class="col-lg-4">
+	  										<div class="wrapper-text" >
+	  										<h1 id="skill2">Web Development</h1>
+	  										<ul style=" display: inline-block; text-align: left;font-size: 25px;">
+  												<li>HTML</li>
+  												<li>CSS</li>
+ 												<li>JavaScript/JQuery</li>
+ 												<li>Bootstrap</li> 						
+											</ul>
+	  								        </div>
+										</div>
+										<div class="col-lg-4">
+	  										<div class="wrapper-text" >
+	  										<h1 id="skill3">Other Softwares</h1>
+	  										<ul style=" display: inline-block; text-align: left;font-size: 25px;">
+  												<li>ADB Kit</li>
+  												<li>Android Studio</li>
+ 												<li>Photoshop</li>
+ 												<li>Illustrator</li>
+ 												<li>LaTex</li>
+											</ul>
+	  								        </div>
+										</div>
+										</div>
+									</div>
+	
+							</div>		
+						</section>
+
+						<section id="projects" class="Projects">
+						<div class= "skills-heading" style="padding: 50px; background-color: rgba(0, 0, 0, 0.15);">
+						<span id="fittext7" class="txt anim-text-flow" style="font-weight: 500; text-align: center; text-shadow: rgb(0, 0, 0) 0px 0px 18px;">PROJECTS</span>
+						</div>
+
+						<div class="spotlight" data-anijs="if: scroll, on: window, do: fadeInRight animated, before: $scrollReveal repeat">
+						   	<div class="container-fluid">
+								<div class="row row-height" >
+					 					<div class="col-lg-5 center-block" style="height: auto; padding:30px;">
+					 						<div class="project-image">
+						 						<div class="js-tilt-no-glare" data-tilt style="transform-style: preserve-3d">
+						 							<img src="assets/images/Capture.PNG" alt="Metro Map Maker" style="box-shadow: 0 20px 27px rgba(0, 0, 0, 0.25); width: 100%;"> 
+						 							<img class="center-image" src="assets/images/Map.PNG" alt="map" style=" left:55%; width: 100%; display: block;">
+						 						</div>
+					 						</div>
+										</div>
+	  									<div class="col-lg-7">
+	  										<div class="wrapper-text text-column-center" >
+	  										<h1>Metro Map Maker</h1>
+	  										<span id="project1">The Metro Map Maker application provides the user with a set of tools to build graphical representations of city subway systems with named lines and named stops and intersecting lines and landmarks. It also provides a means for calculating the best route to take to journey from one particular station to another using a custom path finding algorithm. It also provides an export feature such that it may export a generated map and associated metro system information to a format that can be used by a corresponding web application that will be able to make use of it. View the <a href="https://bitbucket.org/DhruvSheth219/metro-map-maker">Bitbucket Repo</a>.</span>
+	  								        </div>
+										</div>
+								</div>
+							</div>
+						</div>
+						<div class="spotlight" data-anijs="if: scroll, on: window, do: fadeInLeft animated, before: $scrollReveal repeat">
+							<div class="container-fluid">
+								<div class="row row-height" >
+					 					<div class="col-lg-5 col-lg-push-7 center-block" style="height: auto; padding:30px;">
+					 					<center>
+							 					<div class="js-tilt-no-glare" style="max-width: 300px;">
+								 					<img src="assets/images/S8 IT.png" alt="Phone" style="width: 100%; max-width: 300px;">
+								 				</div>
+								 		</center>
+										</div>
+										<div class="col-lg-7 col-lg-pull-5">
+	  										<div class="wrapper-text text-column-center" >
+	  										<h1>Trip Planner Android Application</h1>
+	  										<span id="project2">An android application for planning trips and making itineraries. Download the app <a href="https://drive.google.com/file/d/0B63neicHFSQ0RWQ1ZGRWenB0cG8/view?usp=sharing">here</a>.</span>
+	  								        </div>
+										</div>
+								</div>
+							</div>
+						</div>								
+						
+						<div class="spotlight" data-anijs="if: scroll, on: window, do: fadeInRight animated, before: $scrollReveal repeat">
+						   	<div class="container-fluid">
+								<div class="row row-height" >
+					 					<div class="col-lg-5 center-block" style="height: auto; padding:30px;">
+					 						<div class="project-image">
+						 						<div class="js-tilt" data-tilt style="transform-style: preserve-3d">
+						 							<img src="assets/images/cosmic-1.png" alt="Metro Map Maker" style="  box-shadow: 0 20px 27px rgba(0, 0, 0, 0.25);
+						 								width: 100%;"> 
+						 							<img class="center-image" src="assets/images/cosmic_wimpout.PNG" alt="map" style="width: 100%; display: block; left: 41%; transform: translateZ(50px) translateY(-50%) translateX(-50%) scale(0.8); box-shadow: 0 20px 27px rgba(0, 0, 0, 0.01);
+						 							">
+						 						</div>
+					 						</div>
+										</div>
+	  									<div class="col-lg-7">
+	  										<div class="wrapper-text text-column-center" >
+	  										<h1>Cosmic Wimpout Dice Game</h1>
+	  										<span id="project3">Cosmic Wimpout is a two player dice game containing five cosmic wimpout dices where the player plays with a CPU turn-by-turn. You can learn more about the game <a href="http://www.cosmicwimpout.com/p/8/FAQ">here</a> and view my Github Repo <a href="http://https://github.com/vrockcm/cosmic-wimpout">here</a>.</span>
+	  								        </div>
+										</div>
+								</div>
+							</div>
+						</div>
+						<div class="spotlight" data-anijs="if: scroll, on: window, do: fadeInLeft animated, before: $scrollReveal repeat">
+							<div class="container-fluid">
+								<div class="row row-height" >
+					 					<div class="col-lg-5 col-lg-push-7 center-block" style="height: auto; padding:30px;">
+					 					<center>
+							 					<div class="project-image">
+						 						<div class="js-tilt-no-glare" data-tilt style="transform-style: preserve-3d">
+						 							<img src="assets/images/Caper-back.PNG" alt="Metro Map Maker" style="   box-shadow: 0 20px 27px rgba(0, 0, 0, 0.25); width: 100%;"> 
+						 							<img class="center-image" src="assets/images/Caper-3d.PNG" alt="map" style="width: 100%; display: block;">
+						 						</div>
+					 						</div>
+								 		</center>
+										</div>
+										<div class="col-lg-7 col-lg-pull-5">
+	  										<div class="wrapper-text text-column-center" >
+	  										<h1>Caper (CTO & CO-FOUNDER)</h1>
+	  										<span id="project4">Caper is an events based social networking application exclusively for college students. My friend and I won multiple competitions across New York state with this startup idea, receiving a total of $21,000 from the Research Foundation for SUNY. We have been working on this project ever since. Check it out <a href="http://letscaper.com/">here</a></span>
+	  								        </div>
+										</div>
+								</div>
+							</div>
+						</div>
+						<div class="spotlight" data-anijs="if: scroll, on: window, do: fadeInRight animated, before: $scrollReveal repeat">
+						   	<div class="container-fluid">
+								<div class="row row-height" >
+					 					<div class="col-lg-5 center-block" style="height: auto; padding:30px;">
+					 						<div class="project-image">
+						 						<div class="js-tilt" data-tilt style="transform-style: preserve-3d">
+						 							<img src="assets/images/FORMATTER.png" alt="Metro Map Maker" style="box-shadow: 0 20px 27px rgba(0, 0, 0, 0.25); width: 100%;"> 
+						 							<img class="center-image" src="assets/images/JS.png" alt="map" style="width: 100%; display: block; transform: translateZ(50px) translateY(-50%) translateX(-50%) scale(0.8); box-shadow: 0 20px 27px rgba(0, 0, 0, 0.01);
+						 							">
+						 						</div>
+					 						</div>
+										</div>
+	  									<div class="col-lg-7">
+	  										<div class="wrapper-text text-column-center" >
+	  										<h1>Javascript Formatter</h1>
+	  										<span id="project6">A JavaScript code cleaner tool which allows you to tidy up and optimize your code. View the <a href="https://github.com/vrockcm/JavaScript-Formatter">Github Repo</a>.</span>
+	  								        </div>
+										</div>
+								</div>
+							</div>
+						</div>
+					</section> 			
+					<section id="achievements" class="wrapper style3 special" >
+						<div class="inner" data-anijs="if: scroll, on: window, do: zoomIn animated, before: $scrollReveal repeat">							
+								<span id="fittext5" class="txt anim-text-flow" style="font-weight: 500; text-align: center; text-shadow: rgb(0, 0, 0) 0px 0px 18px; padding-bottom: 50px; padding-top: 30px;">ACHIEVEMENTS</span>
+							<ul class="features">
+								<li class="icon fas fa-trophy">
+									<h3><a href="http://www.stonybrook.edu/commcms/sbdc/student-entrepreneur/">Stony Brook Entrepreneur Challenge</a></h3>
+									<p>Our idea Caper took <b>1st Place</b> and we recieved <b>$15000</b> as prize money. We were invited to participate in a competition at Farmingdale State University for the New York Business Plan Competition.</p>
+								</li>
+								<li class="icon fas fa-trophy">
+									<h3><a href="http://www.farmingdale.edu/business/dare.shtml">Long Island Regional Challenge</a></h3>
+									<p>Our idea Caper took <b>1st Place</b> in the Regional Semifinal Competition for Long Island and we received <b>$6000</b> as prize money. We also got qualified for the State Final New York Business Plan Competition.</p></p>
+								</li>
+								<li class="icon fas fa-chart-line">
+									<h3><a href="http://apply.nybplan.com/">New York Business Plan Competition</a></h3>
+									<p>We participated in NYBPC competition in Albany hosted by SUNY Polytechnic Institute with our idea Caper. <b>50 teams</b> from different institutions across New York participated in the competition.</p>
+								</li>
+								
+								<li class="icon fas fa-car">
+									<h3>R.C Car Design and Race Competition</h3>
+									<p>My team's R.C Car took <b>3rd Place</b>. We had to design the car from scratch and race it on a track with different kinds of surfaces.</p>
+								</li>
+							</ul>
+						</div>
+					</section>
+					</section>
 					<footer>
 							<div class="container-fluid">
 								<div class="row" style="height: 100%; padding-top: 40px">
@@ -101,49 +299,54 @@
 
 								    	<div id="buttons" style="padding:10px 10px 10px 10px;  z-index: 2;float:left;  height: 100%;width: 200px;">
 											<ul  class="social-icons icon-circle icon-zoom list-unstyled list-inline img-responsive""> 
-	                                 			<li> <a href="https://www.facebook.com/drsheth" id="facebook-icon" class="img-responsive" ><i class="fa fa-facebook"></i>
+	                                 			<li> <a href="https://www.facebook.com/drsheth" id="facebook-icon" class="img-responsive" ><i class="fab fa-facebook-f"></i>
 	                                 				</a>
-	                                 			<a href="https://www.linkedin.com/in/vrockcm/" id="linkedin-icon" class="img-responsive"><i class="fa fa-linkedin"></i>
+	                                 			<a href="https://www.linkedin.com/in/vrockcm/" id="linkedin-icon" class="img-responsive"><i class="fab fa-linkedin-in"></i>
 	                                 			</a>
 	                                 			</li> 
 	                                 		</ul>
 
 											<ul class="social-icons icon-circle icon-zoom list-unstyled list-inline img-responsive""> 
-	                                 			<li> <a href="https://github.com/vrockcm" id="github-icon" class="img-responsive"><i class="fa fa-github"></i>
+	                                 			<li> <a href="https://github.com/vrockcm" id="github-icon" class="img-responsive"><i class="fab fa-github"></i>
 	                                 				</a>
-	                                 			<a href="https://plus.google.com/u/0/102266880356551898896" id="googleplus-icon" class="img-responsive" ><i class="fa fa-google-plus"></i>
+	                                 			<a href="https://plus.google.com/u/0/102266880356551898896" id="googleplus-icon" class="img-responsive" ><i class="fab fa-google-plus-g"></i>
 	                                 			</a>
 	                                 			</li> 
 	                                 		</ul>
 	                                    </div>
 	                                </div>
 	                                <div class="col-xs-6 col-sm-2" style="height: 60%">
-	                    					<div style="width:100%;height:200px; float: left;">
-	                    						<a href="https://drive.google.com/file/d/0B63neicHFSQ0QjBMOE9NazRtUTg/view?usp=sharing">
-	                                			<figure><img data-anijs="if: mouseenter, do: tada animated;" class="img-responsive" id="resume"  src="assets/images/resume.png">
-	                                			</figure>
-	                                			</a>
-	                             			</div>
+	                    				<div style="width:100%;height:200px; float: left;">
+	                    					<a href="https://drive.google.com/file/d/0B63neicHFSQ0QjBMOE9NazRtUTg/view?usp=sharing">
+	                                		<figure><img data-anijs="if: mouseenter, do: tada animated;" class="img-responsive" id="resume"  src="assets/images/resume.png">
+	                                		</figure>
+	                                		</a>
 	                             		</div>
-									</div>
+	                             	</div>
+								</div>
 							</div>
-					</footer>
-					
+							<center>
+							<p style="position: absolute; bottom: 0;left: 50%;transform: translate(-50%, 0); color: #fff">&copy; 2018 Dhruv.  All rights reserved</p>
+							</center>
+					</footer>					
 				</div>
 			</div>
-		</div>
-		
+		</div>		
 		<script type="text/javascript" src="assets/javascripts/main.js?v=1.1"></script>
 		<script type="text/javascript" src="assets/javascripts/jquery.fittext.js"></script>
 		<script src="https://anijs.github.io/lib/anijs/anijs-min.js"></script> 
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
 		<script src="https://anijs.github.io/lib/anijs/helpers/dom/anijs-helper-dom-min.js"></script>
 		<script src="https://anijs.github.io/lib/anijs/helpers/scrollreveal/anijs-helper-scrollreveal.js"></script>
 		</script> 
 		<script type="text/javascript">
-		$("#fittext1").fitText(1.2, { minFontSize: '40px', maxFontSize: '100px' });
+		$("#fittext1").fitText(1.2, { minFontSize: '30px', maxFontSize: '50px' });
 		$("#fittext2").fitText(1.2, { minFontSize: '35px', maxFontSize: '120px' });
 		$("#fittext3").fitText(1.9, { minFontSize: '20px', maxFontSize: '25px' });
 		$("#fittext4").fitText(1.6, { minFontSize: '50px', maxFontSize: '200px' });
+		$("#fittext1, #fittext5, #fittext6, #fittext7").fitText(1.2, { minFontSize: '30px', maxFontSize: '60px' });
+		$("#project1, #project2, #project3,#project4, #project5,#project6").fitText(1.9, { minFontSize: '15px', maxFontSize: '20px' });
+		$("#skill1, #skill2, #skill3").fitText(1.2, { minFontSize: '10px', maxFontSize: '30px' });
 		</script>
 		<script type="text/javascript" src="assets/javascripts/content-data.js"></script>
 		<script>
@@ -158,7 +361,20 @@
             hidePreloader();
             });
             });
-        </script>
+            $('.js-tilt').tilt({
+			    glare: true,
+			    maxGlare:.3,
+			    transition:true,
+			    scale:1.05, 
+			    maxTilt:10,
+			    perspective: 1000, 
+		    })
 
+            $('.js-tilt-no-glare').tilt({
+			    scale: 1.05,
+			    maxTilt:15,
+			    perspective: 1000, 
+			})
+        </script>
 	</body>
 </html>
