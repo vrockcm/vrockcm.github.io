@@ -1,7 +1,5 @@
 /* Inserting style for smooth scrolling. */
-@import url(https://fonts.googleapis.com/css?family=Oswald:400,300,700);
 @import url('https://fonts.googleapis.com/css?family=Montserrat:200,500,900');
-
 .main_h {
   position: fixed;
   max-height: 70px;
