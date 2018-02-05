@@ -4,13 +4,13 @@ function scrollFooter(scrollY, heightFooter)
 {
 	if(scrollY >= heightFooter)
 	{
-		jQuery_1('footer').css({
+		$('footer').css({
 			'bottom' : '0px'
 		});
 	}
 	else
 	{
-		jQuery_1('footer').css({
+		$('footer').css({
 			'bottom' : '-' + heightFooter + 'px'
 		});
 	}
@@ -21,89 +21,92 @@ function setHeiHeight() {
         height: $(window).height() + 'px'
     });
 }
+
+
+function setAnimate(){
+	var heightDocument	= ($(window).height()) + ($('.content').height()) + ($('footer').height());
+	// Defining the size of the element to animate
+	$('#scroll-animate, #scroll-animate-main').css({
+		'height' :  (heightDocument) + 'px'
+	});
+}
+
+
 setHeiHeight(); // window height on first page loading
 $( window ).resize(function() {
 	setHeiHeight();
-	var windowHeight	= jQuery_1(window).height(),
-		windowWidth		= $( window ).width();
-  	var heightH = windowHeight;
-	var widthH =  ((windowHeight*4)/3);
+	var windowHeight	= $(window).height(),
+		windowWidth		= $( window ).width(),
+	  	heightH = windowHeight,
+		widthH =  ((windowHeight*4)/3);
 		while(widthH<windowWidth){
 				widthH=widthH+50;
 				heightH = ((widthH*3)/4);
 			}
 	var background = new Image();
-	background.src = jQuery_1('.skill-parallax').css('background-image').replace('url(','').replace(')','').replace(/\"/gi, "");
+	background.src = $('.skill-parallax').css('background-image').replace('url(','').replace(')','').replace(/\"/gi, "");
 
     var widthH1 = background.width,
-        heightH1 = background.height;
-
-    var heightH2 = jQuery_1('.skill-parallax').height();
-	var widthH2 =  $( window ).width();
+        heightH1 = background.height,
+    	heightH2 = $('.skill-parallax').height(),
+		widthH2 =  $( window ).width();
 
 	while(heightH1<heightH2 || widthH1<widthH2){
 			heightH1=heightH1+50;
 			widthH1 =  ((heightH1*16)/9);
 	}	
-	jQuery_1('header').css({
+
+	$('header').css({
 		'background-size' :  widthH+'px '+ heightH + 'px',
 	});
-	jQuery_1('.skill-parallax').css({
-            'background-size' :  widthH1+'px '+ heightH1 + 'px',
-        });
+	$('.skill-parallax').css({
+        'background-size' :  widthH1+'px '+ heightH1 + 'px',
+    });
 
-	jQuery_1('header').css({
+	$('header').css({
 		'height' : windowHeight + 'px',
 		'background-size' :  widthH+'px '+ heightH + 'px',
 	});
-	heightDocument	= (windowHeight) + (jQuery_1('.content').height()) + (jQuery_1('footer').height());
-	// Defining the size of the element to animate
-	jQuery_1('#scroll-animate, #scroll-animate-main').css({
-		'height' :  heightDocument + 'px'
-	});
-		jQuery_1('.wrapper-parallax').css({
+		$('.wrapper-parallax').css({
 		'margin-top' : windowHeight + 'px'
-	});
+		});
+		setAnimate();
 });
 
-
 // Start Action to load the whole page
-jQuery_1(window).load(function(){
-	var windowHeight	= jQuery_1(window).height(),
+$(window).on('load',function(){
+	var windowHeight	= $(window).height(),
 		windowWidth		= $( window ).width(),
-		footerHeight	= jQuery_1('footer').height();
-	// Defining the size of the header and content elements
-		var heightH = windowHeight;
-		var widthH =  ((windowHeight*4)/3);
-			while(widthH<windowWidth){
+		footerHeight	= $('footer').height(),
+		heightH = windowHeight,
+		widthH =  ((windowHeight*4)/3);
+		while(widthH<windowWidth){
 				widthH=widthH+50;
 				heightH = ((widthH*3)/4);
-			}
+	}
+	var heightDocument	= (windowHeight) + ($('.content').height()) + ($('footer').height());
     var background = new Image();
-	background.src = jQuery_1('.skill-parallax').css('background-image').replace('url(','').replace(')','').replace(/\"/gi, "");
+	background.src = $('.skill-parallax').css('background-image').replace('url(','').replace(')','').replace(/\"/gi, "");
 
     var widthH1 = background.width,
-        heightH1 = background.height;
-    var heightH2 = jQuery_1('.skill-parallax').height();
-	var widthH2 =  $( window ).width();
+        heightH1 = background.height,
+        heightH2 = $('.skill-parallax').height(),
+		widthH2 =  $( window ).width();
 
 	while(heightH1<heightH2 || widthH1<widthH2){
 			heightH1=heightH1+50;
 			widthH1 =  ((heightH1*16)/9);
 	}
-	jQuery_1('header').css({
+	$('header').css({
 		'height' : windowHeight + 'px',
-		'background-size' :  widthH+'px '+ heightH + 'px',
+		'background-size' :  widthH +'px '+ heightH + 'px',
 	});
 
-	jQuery_1('.wrapper-parallax').css({
+	setAnimate();
+		$('.wrapper-parallax').css({
 		'margin-top' : windowHeight + 'px'
 	});
-	var heightDocument	= (windowHeight) + (jQuery_1('.content').height()) + (jQuery_1('footer').height());
-	// Defining the size of the element to animate
-	jQuery_1('#scroll-animate, #scroll-animate-main').css({
-		'height' :  (heightDocument-20) + 'px'
-	});
+	setAnimate();
 
 	// Getting function scrollFooter() to verify the position of the scroll and hide the footer
 	scrollFooter(window.scrollY, footerHeight);
@@ -111,26 +114,23 @@ jQuery_1(window).load(function(){
 	// Start Action on scrolling
 	window.onscroll = function(){
 		var scroll = window.scrollY;
-
 		// Creating the effect of smooth animation content to use the scroll.
-		jQuery_1('#scroll-animate-main').css({
+		$('#scroll-animate-main').css({
 			'top' : '-' + scroll + 'px'
 		});
-		jQuery_1('footer').css({
+		$('footer').css({
 			'background-position-y' : 100 - (scroll * 300 / heightDocument) + 'px'
-		});//
-		jQuery_1('header').css({
+		});
+		$('header').css({
             'background-position' : 'center ' + (- scroll * 300 / heightDocument) + 'px'  
         });
-        jQuery_1('.skill-parallax').css({
+        $('.skill-parallax').css({
             'background-position' : 'center ' + ((- scroll * 800) / (heightDocument)) + 'px',
             'background-size' :  widthH1+'px '+ heightH1 + 'px',
         });
-		// On scrolling using function scrollFooter() to verify the position of the scroll and hide the footer
 		scrollFooter(scroll, footerHeight);
 	};
 });
-//]]>
 
       
 $(window).scroll(function(){
@@ -174,16 +174,4 @@ $('nav a').click(function(event) {
         scrollTop: target
     }, 500);
     event.preventDefault();
-});
-
-jQuery_1('.txt').html(function(i, html) {
-  var chars = jQuery_1.trim(html).split("");
-
-  return '<span>' + chars.join('</span><span>') + '</span>';
-});
-
-jQuery_1('.skill').html(function(i, html) {
-  var chars = ["S","K","I","L","L","S"," & ","I","N","T","E","R","E","S","T","S"];
-
-  return '<span>' + chars.join('</span><span>') + '</span>';
 });
