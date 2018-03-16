@@ -12,12 +12,10 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>		
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-		<link rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css">
-
 		<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 		
-		<link rel="stylesheet" type="text/css" href="assets/stylesheets/main.css?v=1.2">
+		<link rel="stylesheet" type="text/css" href="assets/stylesheets/main.css">
+		<link rel="stylesheet" type="text/css" href="assets/stylesheets/animate.css">
 	    <link rel="icon" type="image/icon" href="favicon.ico">
 	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 		<!--[if lt IE 8]><link rel="stylesheet" href="stylesheets/ie.css"><![endif]-->
@@ -27,17 +25,13 @@
 	</head>
 
 	<body>
-          	<div class="wrapper_pre">
-          	<div class="bookshelf_wrapper">
-			  <ul class="books_list">
-			    <li class="book_item first"></li>
-			    <li class="book_item second"></li>
-			    <li class="book_item third"></li>
-			    <li class="book_item fourth"></li>
-			    <li class="book_item fifth"></li>
-			    <li class="book_item sixth"></li>
-			  </ul>
-			  <div class="shelf"></div>
+        <div class="wrapper_pre">
+        	<div class="clock">
+          	  <div class="canvas canvas2">
+			    <div class="spinner2"></div>   
+			    <div class="hourHand"></div>
+			    <div class="dot"></div>
+			  </div>
 			</div>
 		</div>
 		<div class="main_h">
@@ -53,7 +47,7 @@
 
 			        <nav>
 			            <ul>
-			                <li><a href=".content">ABOUT</a></li>
+			                <li><a href=".content-heading">ABOUT</a></li>
 			                <li><a href=".skill-parallax">SKILLS & INTERESTS</a></li>
 			                <li><a href="#projects">PROJECTS</a></li>
 			                <li><a href="#achievements">ACHIEVEMENTS</a></li>
@@ -63,21 +57,15 @@
 			    </div> <!-- / row -->
 
 		</div>
-		<div id="scroll-animate">
-			<div id="scroll-animate-main">
-				<div class="wrapper-parallax">
-					<header>
-						
-							<div class="my-icon name-ani">
-							<span id="fittext4" >DHRUV SHETH</span>
-							</div>									
-						<div class='icon-scroll' data-anijs="if: load, on: window, do:fadeInUp animated;"></div>	
-
-			        </header>
-
-					<section class="content" >
+		<div class="zind">
+			<div class="wrapper_main">
+				<div class="wrap">	
+				  <div class="arrow animated bounce"></div>
+				  
+				</div>
+			</div>
 						<div class="container">							
-  									 <div class= "content-heading">
+  									 <div class="content-heading">
 									 <div id="fittext1" class="t" >ABOUT</div>
 				 					 </div>
 				 				<div class="row row-height" style="position: relative; ">
@@ -144,11 +132,11 @@
 						</section>
 
 						<section id="projects" class="Projects">
-						<div class= "skills-heading" style="padding: 50px; background-color: rgba(0, 0, 0, 0.15);">
+						<div class= "skills-heading" style="padding: 50px;">
 						<div id="fittext7" class="t">PROJECTS</div>
 						</div>
-
-						<div class="spotlight" data-anijs="if: scroll, on: window, do: fadeInRight animated, before: $scrollReveal repeat">
+						<div class="wrap">
+						<div class="spotlight wow fadeInLeft">
 						   	<div class="container-fluid">
 								<div class="row row-height" >
 					 					<div class="col-lg-5 center-block" style="height: auto; padding:30px;">
@@ -160,7 +148,7 @@
 					 						</div>
 										</div>
 	  									<div class="col-lg-7">
-	  										<div class="wrapper-text text-column-center" >
+	  										<div class="wrapper-text text-column-center" style="color: black; text-shadow: none;" >
 	  										<div id="head1" class="def-heading">Metro Map Maker</div>
 	  										<span id="project1">The Metro Map Maker application provides the user with a set of tools to build graphical representations of city subway systems with named lines and named stops and intersecting lines and landmarks. It also provides a means for calculating the best route to take to journey from one particular station to another using a custom path finding algorithm. It also provides an export feature such that it may export a generated map and associated metro system information to a format that can be used by a corresponding web application that will be able to make use of it. View the <a href="https://bitbucket.org/DhruvSheth219/metro-map-maker">Bitbucket Repo</a>.</span>
 	  								        </div>
@@ -168,7 +156,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="spotlight" data-anijs="if: scroll, on: window, do: fadeInLeft animated, before: $scrollReveal repeat">
+						<div class="spotlight wow fadeInRight">
 							<div class="container-fluid">
 								<div class="row row-height" >
 					 					<div class="col-lg-5 col-lg-push-7 center-block" style="height: auto; padding:30px;">
@@ -179,7 +167,7 @@
 								 		</center>
 										</div>
 										<div class="col-lg-7 col-lg-pull-5">
-	  										<div class="wrapper-text text-column-center" >
+	  										<div class="wrapper-text text-column-center" style="color: black; text-shadow: none;">
 	  										<div id="head1" class="def-heading">Trip Planner Android Application</div>
 	  										<span id="project2">An android application for planning trips and making itineraries. Download the app <a href="https://drive.google.com/file/d/0B63neicHFSQ0RWQ1ZGRWenB0cG8/view?usp=sharing">here</a>.</span>
 	  								        </div>
@@ -188,7 +176,7 @@
 							</div>
 						</div>								
 						
-						<div class="spotlight" data-anijs="if: scroll, on: window, do: fadeInRight animated, before: $scrollReveal repeat">
+						<div class="spotlight wow fadeInLeft">
 						   	<div class="container-fluid">
 								<div class="row row-height" >
 					 					<div class="col-lg-5 center-block" style="height: auto; padding:30px;">
@@ -202,7 +190,7 @@
 					 						</div>
 										</div>
 	  									<div class="col-lg-7">
-	  										<div class="wrapper-text text-column-center" >
+	  										<div class="wrapper-text text-column-center" style="color: black; text-shadow: none;">
 	  										<div id="head1" class="def-heading">Cosmic Wimpout Dice Game</div>
 	  										<span id="project3">Cosmic Wimpout is a two player dice game containing five cosmic wimpout dices where the player plays with a CPU turn-by-turn. You can learn more about the game <a href="http://www.cosmicwimpout.com/p/8/FAQ">here</a> and view my Github Repo <a href="http://https://github.com/vrockcm/cosmic-wimpout">here</a>.</span>
 	  								        </div>
@@ -210,7 +198,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="spotlight" data-anijs="if: scroll, on: window, do: fadeInLeft animated, before: $scrollReveal repeat">
+						<div class="spotlight wow fadeInRight">
 							<div class="container-fluid">
 								<div class="row row-height" >
 					 					<div class="col-lg-5 col-lg-push-7 center-block" style="height: auto; padding:30px;">
@@ -224,7 +212,7 @@
 								 		</center>
 										</div>
 										<div class="col-lg-7 col-lg-pull-5">
-	  										<div class="wrapper-text text-column-center" >
+	  										<div class="wrapper-text text-column-center" style="color: black; text-shadow: none;">
 	  										<div id="head1" class="def-heading">Caper (CTO & CO-FOUNDER)</div>
 	  										<span id="project4">Caper is an events based social networking application exclusively for college students. My friend and I won multiple competitions across New York state with this startup idea, receiving a total of $21,000 from the Research Foundation for SUNY. We have been working on this project ever since. Check it out <a href="http://letscaper.com/">here</a></span>
 	  								        </div>
@@ -232,7 +220,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="spotlight" data-anijs="if: scroll, on: window, do: fadeInRight animated, before: $scrollReveal repeat">
+						<div class="spotlight wow fadeInLeft">
 						   	<div class="container-fluid">
 								<div class="row row-height" >
 					 					<div class="col-lg-5 center-block" style="height: auto; padding:30px;">
@@ -245,7 +233,7 @@
 					 						</div>
 										</div>
 	  									<div class="col-lg-7">
-	  										<div class="wrapper-text text-column-center" >
+	  										<div class="wrapper-text text-column-center" style="color: black; text-shadow: none;">
 	  										<div id="head1" class="def-heading">Javascript Formatter</div>
 	  										<span id="project5">A JavaScript code cleaner tool which allows you to tidy up and optimize your code. View the <a href="https://github.com/vrockcm/JavaScript-Formatter">Github Repo</a>.</span>
 	  								        </div>
@@ -254,8 +242,8 @@
 							</div>
 						</div>
 					</section> 			
-					<section id="achievements" class="wrapper style3 special" >
-						<div class="inner" data-anijs="if: scroll, on: window, do: zoomIn animated, before: $scrollReveal repeat">							
+					<section id="achievements" class="wrapper style3 special">
+						<div class="inner wow fadeIn">							
 								<div id="fittext5" class="t" style="padding-bottom: 50px; padding-top: 30px;">ACHIEVEMENTS</div>
 							<ul class="features">
 								<li class="icon fas fa-trophy">
@@ -275,13 +263,32 @@
 									<h3>R.C Car Design and Race Competition</h3>
 									<p>My team's R.C Car took <b>3rd Place</b>. We had to design the car from scratch and race it on a track with different types of terrain.</p>
 								</li>
+								<li class="icon fas fa-shield-alt">
+									<h3><a href="https://github.com/psusecurity/psusecurity.github.io">Penn State Cybersecurity Competition</a></h3>
+									<p>My team with a total of 2 members including me took <b>3rd Place</b> out of 16 participants. It was a 10 hr Cyber competition on crash forensics against memory corruption attacks sponsored by <b>Penn State University & NSA</b>. The contest was about finding security loopholes in software. The contest organizers produced a collection of core dumps attributable to real-world memory corruption attacks and our job was to find and pinpoint where exactly these exploits were used to corrupt memory thus locate vulnerability. We also had to perform ret2libc attacks for several challenges.</p>
+								</li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
 							</ul>
 						</div>
 					</section>
-					</section>
+					<ul class="bg-bubbles">
+					    <li></li>
+					    <li></li>
+					    <li></li>
+					    <li></li>
+					    <li></li>
+					    <li></li>
+					    <li></li>
+					    <li></li>
+					    <li></li>
+					    <li></li>
+					    <li></li>
+					    <li></li>
+					    <li></li>
+				    </ul>	
+				</div>
 					<footer>
 							<div class="container-fluid">
-								<div class="row" style="height: 100%; padding-top: 40px">
+								<div class="row" style="height: 100%;">
   								    <div class="col-xs-12 col-sm-7" style="height: 40%" >
 								        <div class="footer-heading">
 								    		<div id="fittext2" class="t">CONTACT</div>
@@ -310,7 +317,7 @@
 	                                <div class="col-xs-6 col-sm-2" style="height: 60%">
 	                    				<div style="width:100%;height:200px; float: left;">
 	                    					<a href="https://drive.google.com/file/d/0B63neicHFSQ0QjBMOE9NazRtUTg/view?usp=sharing">
-	                                		<figure><img data-anijs="if: mouseenter, do: tada animated;" class="img-responsive" id="resume"  src="assets/images/resume.png">
+	                                		<figure><img class="img-responsive" id="resume"  src="assets/images/resume.png">
 	                                		</figure>
 	                                		</a>
 	                             		</div>
@@ -318,22 +325,20 @@
 								</div>
 							</div>
 							<center>
-							<p class="copyright">&copy; 2018 Dhruv.  All rights reserved</p>
+							<p class="copyright">&copy; 2018 Dhruv Sheth. All rights reserved</p>
 							</center>
 					</footer>					
 				</div>
 			</div>
-		</div>		
-		<script type="text/javascript" src="assets/javascripts/main.js?v=1.1"></script>
+		</div>	
+
+		<script type="text/javascript" src="assets/javascripts/main.js"></script>
 
 		<script type="text/javascript" src="assets/javascripts/jquery.fittext.js"></script>
 
-		<script src="https://cdn.jsdelivr.net/gh/anijs/anijs@0.9.3/dist/anijs-min.js"></script> 
-
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
 
-		<script src="https://cdn.jsdelivr.net/gh/anijs/anijs@0.9.3/src/helpers/scrollreveal/anijs-helper-scrollreveal.js"></script>
-
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 
 		<script type="text/javascript">
 		$("#fittext2").fitText(1.2, { minFontSize: '35px', maxFontSize: '120px' });
@@ -370,6 +375,17 @@
 			    maxTilt:15,
 			    perspective: 1000, 
 			})
+
+			wow = new WOW(
+                      {
+                      boxClass:     'wow',      // default
+                      animateClass: 'animated', // default
+                      offset:       0,          // default
+                      mobile:       false,       // default
+                      live:         true        // default
+                    }
+                    )
+                    wow.init();
         </script>
 	</body>
 </html>
