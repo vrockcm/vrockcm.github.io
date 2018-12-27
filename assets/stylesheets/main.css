@@ -994,7 +994,7 @@ body.tight .wrapper_main {
 
 
 .bg-bubbles {
-  position: fixed;
+  position: relative;
   padding: 0;
   top: -10px;
   left: 0;
