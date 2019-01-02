@@ -440,7 +440,7 @@ h3{
 }
 
 h3 span{
-    font-size: 36px;
+    font-size: 32px;
     font-family: 'Montserrat';
     font-weight: 600;
     color: black;
@@ -1175,6 +1175,15 @@ body.tight .wrapper_main {
     justify-content: space-between;
   }
 
+  .card-lookalike {
+      padding: 20px;
+      width: 90%;
+  }
+
+  #email .card-lookalike {
+      width: 100%;
+      padding: 30px;
+  }
 
   .section-showcase ul {
     margin-top: 40px;
@@ -1251,10 +1260,7 @@ body.tight .wrapper_main {
       width: 100%;
   }
     
-    #email .card-lookalike {
-      width: 100%;
-      padding: 30px;
-  }
+  
 
 
     .section-showcase ul li {
