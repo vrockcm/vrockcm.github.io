@@ -2,9 +2,6 @@
 <html lang="en">
 <html>
 	<head>
-		<!--<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />-->
-		<!--<meta http-equiv="Pragma" content="no-cache" />-->
-		<!--<meta http-equiv="Expires" content="0" />-->
 		<meta http-equiv="X-UA-Compatible" content="chrome=1">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -12,10 +9,14 @@
     	<meta name="keywords" content="Software Developer,Entrepreneur,Student,Front-End Web Developer,Dhruv Sheth,Stony Brook University,Developer">
 		<title>Dhruv Sheth</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>		
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 		
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 		<link rel="stylesheet" type="text/css" href="assets/stylesheets/main.css">
 		<link rel="stylesheet" type="text/css" href="assets/stylesheets/animate.css">
 	    <link rel="icon" type="image/icon" href="favicon.ico">
@@ -24,309 +25,283 @@
 
 	</head>
 
-	<body>
-		<div class="zind">
+	<body data-spy="scroll" data-target=".navbar" data-offset="290">
+		<div class="zind" id="hero" data-aos-easing="ease-in-out-sine" data-aos-duration="900" data-aos-delay="300" data-gr-c-s-loaded="true" class="loaded" style="background:#2b2b2b">
 			<div class="wrapper_pre">
-        	<div class="clock">
-          	  <div class="canvas canvas2">
-			    <div class="spinner2"></div>   
-			    <div class="hourHand"></div>
-			    <div class="dot"></div>
-			  </div>
+	        	<div class="clock">
+	          	  <div class="canvas canvas2">
+				    <div class="spinner2"></div>   
+				    <div class="hourHand"></div>
+				    <div class="dot"></div>
+				  </div>
+				</div>
 			</div>
-		</div>
-		<div class="main_h">
+			<div class="container">
+				<nav class="navbar fixed-top navbar-expand-lg">
+				  <a class="navbar-brand" href="#hero">Dhruv Sheth</a>
 
-				    <div class="row">
-			        <a class="logo" href="#">D/S</a>
+				  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				   <span class="icon-bar top-bar"></span>
+					<span class="icon-bar middle-bar"></span>
+					<span class="icon-bar bottom-bar"></span>
+				   <span class="sr-only">Toggle navigation</span>
+				  </button>
 
-			        <div class="mobile-toggle">
-			            <span></span>
-			            <span></span>
-			            <span></span>
-			        </div>
+				  <div class="collapse navbar-collapse" id="navbarNav">
+				    <ul class="navbar-nav ml-auto">
+				      <li class="nav-item">
+				        <a class="nav-link " href="#about-scroll">About</a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link " href="#achieve">Achievements</a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link " href="#showcase">Projects</a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link " href="#contact">Contact</a>
+				      </li>
+				    </ul>
+				  </div>
+				</nav>
+			</div>
 
-			        <nav>
-			            <ul>
-			                <li><a href=".content-heading">ABOUT</a></li>
-			                <li><a href=".skill-parallax">SKILLS & INTERESTS</a></li>
-			                <li><a href="#projects">PROJECTS</a></li>
-			                <li><a href="#achievements">ACHIEVEMENTS</a></li>
-			            </ul>
-			        </nav>
-
-			    </div> <!-- / row -->
-
-		</div>
 			<div class="wrapper_main">
 				<div class="wrap">	
 				  <div class="arrow animated bounce"></div>
-				  
 				</div>
 			</div>
-						<div class="container">							
-  									 <div class="content-heading">
-									 <div id="fittext1" class="t" >ABOUT</div>
-				 					 </div>
-				 				<div class="row row-height" style="position: relative; ">
-				 					<div class="col-lg-6 col-centered" style="height: auto;">
-										<div class="wrapper">
-											<img src="assets/images/OLDME.png"  class="circle img-circle img-responsive" id="OLDME" alt="Responsive image" >
-										</div>
-									</div>
-  									<div class="col-lg-6 col-centered" style="height: auto;" id="bio">
-  									<div class="wrapper-text text-column-center">
-  										<span id="fittext3" >Dhruv Sheth is a Software Developer and Entrepreneur based in New York. He is pursuing Bachelors in Computer Science at Stony Brook University. He primarily uses Java for programming and likes to make real-world computer applications. He is also a self taught web designer and likes to keep himself busy with work by learning new things. When he isn't glued to his computer screen, he spends time playing video games and listening to music.</span>
-
-  								    </div>
+			
+			<div class="card-lookalike" data-aos="fade-in" id="scroll-point">
+				<h1 id="about-scroll">[About]</h1>
+				<div class="wrapper-container">
+					<div class="container" id="about" data-color="#2b2b2b">		
+			 			<div class="row row-height" style="position: relative; ">
+				 			<div class="col-lg-6 col-centered" style="height: auto;">
+									<div class="wrapper">
+										<img src="assets/images/OLDME.png" class="rounded-circle img-fluid" id="OLDME" alt="Responsive image" >
 									</div>
 								</div>
+							<div id="bio" class="col-lg-6 col-centered" style="height: auto;" >
+								<div class="wrapper-text text-column-center">
+									
+									<p>Dhruv Sheth is a Software Developer and Entrepreneur based in New York. He is pursuing Bachelors in Computer Science at Stony Brook University. He primarily uses Java for programming and likes to make real-world computer applications. He is also a self taught web designer and likes to keep himself busy with work by learning about new technologies. When he isn't glued to his computer screen, he spends time playing video games and listening to music.</p>
+								</div>
+							</div>
+						</div>				
+			 			<div class="row row-height" style="position: relative; ">
+				 			<div class="col-lg-12 col-centered">
+								<div class="wrapper-text" style="text-align: center;">
+									<h3>Software Programming</h3>
+									<p>Below are languages which I use for software development.</p>
+									<ul class="skills" >
+									  <li class="skill" aria-label="elite">Java</li>
+									  <li class="skill" aria-label="advanced">C#</li>
+									  <li class="skill" aria-label="novice">Python</li>
+									  <li class="skill" aria-label="elite">MIPS</li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-lg-12 col-centered">
+								<div class="wrapper-text" style="text-align: center;">
+									<h3>Web Development</h3>
+									<p>Below are some languages and frameworks I use for web developement.</p>
+									<ul class="skills">
+									  <li class="skill" aria-label="elite">HTML5</li>
+									  <li class="skill" aria-label="elite">CSS3</li>
+									  <li class="skill" aria-label="adept">JavaScript</li>
+									  <li class="skill" aria-label="adept">JQuery</li>
+									  <li class="skill" aria-label="average">Node.js</li>
+									  <li class="skill" aria-label="average">Express.js</li>
+									  <li class="skill" aria-label="elite">MySQL</li>
+									</ul>
+								</div>	
+							</div>
+							<div id="achieve" class="col-lg-5 col-centered">
+								<div class="wrapper-text text-column-center">
+									<h3>Honorable <span> Recognitions & Awards </span></h3>
+									<p>Check my <a href="https://www.linkedin.com/in/vrockcm/">LinkedIn</a> for more details.</p>
+								</div>	
+							</div>
+							<div class="col-lg-7 col-centered">
+								<ul class="awards">
+			                        <li>
+			                            <div class="awards-icon">
+			                                <span><img class="award-img" src="assets/images/gold.png" alt="First Prize"></span>
+			                            </div>
+			                            <div class="about-awards">
+			                                <h6>Stony Brook University</h6>
+			                                <h6>Entrepreneurs Challenge 2018</h6>
+			                            </div>
+			                        </li>
+			                        <li>
+			                            <div class="awards-icon">
+			                                <span><img class="award-img" src="assets/images/gold.png" alt="First Prize"></span>
+			                            </div>
+			                            <div class="about-awards">
+			                                <h6>Farmingdale State University</h6>
+			                                <h6>Entrepreneurs DARE Challenge</h6>
+			                            </div>
+			                        </li>
+			                        <li>
+			                            <div class="awards-icon">
+			                                <span><img class="award-img" src="assets/images/bronze.png" alt="Third Prize"></span>
+			                            </div>
+			                            <div class="about-awards">
+			                                <h6>Penn State University & NSA</h6>
+			                                <h6>CyberSecurity Competition</h6>
+			                            </div>
+			                        </li>
+			                    </ul>
+							</div>
 						</div>
+					</div>
+				</div>
+			</div>
+			<div id="showcase" data-color="#FFF">
+			        <div class="section-showcase">
+			            <div class="container">
+			                <h1 class="projects-heading">[Projects]</h1>
+			                <ul class="row">
+			                    <li class="col-lg-6 Metro aos-item" data-aos="fade-up">
+			                        <a href="https://github.com/vrockcm/MetroMapMaker" title="">
+			                            <div>
+			                            	<div class="js-tilt" data-tilt style="transform-style: preserve-3d">
+				                                <div class="placeholder">
+				                                    <div class="project-title" >
+				                                        <h4>Metro Map Maker</h4>
+				                                        <h3>Software Development</h3>
+				                                    </div>
+				                                    <div class="project-thumbnail">
+				                                        <img src="assets/images/MMM.PNG" alt="" class="img-fluid">
+				                                    </div>
+				                                </div>
+				                            </div>
+			                            </div>
+			                        </a>
+			                    </li>
 
-						<section id="skills" class="SkillInterests">
-						<div class="skill-parallax" id="lmao">
-									<center>								
-										<div class= "skills-heading">
-										 		<div id="fittext6" class="t">SKILLS & INTERESTS</div>
-				 					 	</div>
-				 					 </center>
-				 					 <div class="container-fluid">
-				 					 	<div class="row" style="padding-bottom: 70px;" >
-	  									<div class="col-lg-4">
-	  										<div class="wrapper-text" >
-	  										<div id="head1" class="def-heading">Programming Languages</div>
-	  										<ul style="display:inline-block;vertical-align:middle; text-align: left; font-size: 25px;">
-  												<li>Java</li>
-  												<li>C</li>
- 												<li>MIPS Assembly</li>
-											</ul>
-	  								        </div>
-										</div>
-										<div class="col-lg-4">
-	  										<div class="wrapper-text" >
-	  										<div id="head1" class="def-heading">Web Development</div>
-	  										<ul style=" display: inline-block; text-align: left;font-size: 25px;">
-  												<li>HTML</li>
-  												<li>CSS</li>
- 												<li>JavaScript/JQuery</li>
- 												<li>Bootstrap</li> 						
-											</ul>
-	  								        </div>
-										</div>
-										<div class="col-lg-4">
-	  										<div class="wrapper-text" >
-	  										<div id="head1" class="def-heading">Other Software</div>
-	  										<ul style=" display: inline-block; text-align: left;font-size: 25px;">
-  												<li>ADB Kit</li>
-  												<li>Android Studio</li>
- 												<li>Photoshop</li>
- 												<li>Illustrator</li>
- 												<li>LaTex</li>
-											</ul>
-	  								        </div>
-										</div>
-										</div>
-									</div>
-	
-							</div>		
-						</section>
+			                    <li class="col-lg-6 Caper aos-item" data-aos="fade-up">
+			                        <a href="letscaper.com" title="">
+			                            <div class="js-tilt" data-tilt style="transform-style: preserve-3d">
+			                                <div class="placeholder">
+			                                    <div class="project-title">
+			                                        <h4>Caper</h4>
+			                                        <h3>DevOps, web design & UI integration</h3>
+			                                    </div>
+			                                    <div class="project-thumbnail">
+			                                        <img src="assets/images/Caper.png" alt="" class="img-fluid">
+			                                    </div>
+			                                </div>
+			                            </div>
+			                        </a>
+			                    </li>              
+			                    <li class="col-lg-6 Movie aos-item" data-aos="fade-up">
+			                        <a href="https://github.com/vrockcm/MovieDb" title="">
+			                            <div class="js-tilt" data-tilt style="transform-style: preserve-3d">
+			                                <div class="placeholder">
+			                                    <div class="project-title">
+			                                        <h4>MovieDb</h4>
+			                                        <h3>Frontend & Backend Interface</h3>
+			                                    </div>
 
-						<section id="projects" class="Projects">
-						<div class= "skills-heading" style="padding: 50px;">
-						<div id="fittext7" class="t">PROJECTS</div>
-						</div>
-						<div class="wrap">
-						<div class="spotlight wow fadeInLeft">
-						   	<div class="container-fluid">
-								<div class="row row-height" >
-					 					<div class="col-lg-5 center-block" style="height: auto; padding:30px;">
-					 						<div class="project-image">
-						 						<div class="js-tilt-no-glare" data-tilt style="transform-style: preserve-3d">
-						 							<img src="assets/images/Capture.PNG" alt="Metro Map Maker" style="box-shadow: 0 20px 27px rgba(0, 0, 0, 0.25); width: 100%;"> 
-						 							<img class="center-image" src="assets/images/Map.png" alt="map" style=" left:55%; width: 100%; display: block;">
-						 						</div>
-					 						</div>
-										</div>
-	  									<div class="col-lg-7">
-	  										<div class="wrapper-text text-column-center text_color" >
-	  										<div id="head1" class="def-heading">Metro Map Maker</div>
-	  										<span id="project1">The Metro Map Maker application provides the user with a set of tools to build graphical representations of city subway systems with named lines and named stops and intersecting lines and landmarks. It also provides a means for calculating the best route to take to journey from one particular station to another using a custom path finding algorithm. It also provides an export feature such that it may export a generated map and associated metro system information to a format that can be used by a corresponding web application that will be able to make use of it. View the <a href="https://bitbucket.org/DhruvSheth219/metro-map-maker">Bitbucket Repo</a>.</span>
-	  								        </div>
-										</div>
+			                                    <div class="project-thumbnail">
+			                                        <img src="assets/images/Movie.png" alt="" class="img-fluid">
+			                                    </div>
+			                                </div>
+			                            </div>
+			                        </a>
+			                    </li>
+
+			                    <li class="col-lg-6 Trip aos-item" data-aos="fade-up">
+			                        <a href="https://drive.google.com/drive/folders/0B63neicHFSQ0TE52OUQxNGRmSDg?usp=sharing" title="">
+			                            <div class="js-tilt" data-tilt style="transform-style: preserve-3d">
+			                                <div class="placeholder">
+			                                    <div class="project-title">
+			                                        <h4>Trip Planner Android App</h4>
+			                                        <h3>Android App Development</h3>
+			                                    </div>
+
+			                                    <div class="project-thumbnail">
+			                                        <img src="assets/images/Phone.png" alt="" class="img-fluid">
+			                                    </div>
+			                                </div>
+			                            </div>
+			                        </a>
+			                    </li>
+			                	<li class="col-lg-6 order-md-12 Cosmic aos-item" data-aos="fade-up">
+			                        <a href="https://github.com/vrockcm/cosmic-wimpout" title="">
+			                            <div class="js-tilt" data-tilt style="transform-style: preserve-3d">
+			                                <div class="placeholder">
+			                                    <div class="project-title">
+			                                        <h4>Cosmic Wimpout</h4>
+			                                        <h3>2 Player Game Development</h3>
+			                                    </div>
+
+			                                    <div class="project-thumbnail">
+			                                        <img src="assets/images/cosmic.png" alt="" class="img-fluid">
+			                                    </div>
+			                                </div>
+			                            </div>
+			                        </a>
+			                    </li>
+			                    <li class="col-lg-6 order-last order-lg-0 Github aos-item" data-aos="fade-in">
+			                         <div class="showcase-section-text">
+			                        <h3>Check out my other projects <a href="https://github.com/vrockcm">here</a></h3>
+			                        </div>
+			                    </li>
+			                </ul>
+			            </div>
+			        </div>
+			    </div>
+					<div id="contact" class="container-fluid">
+								<div class="touch">
+									<h2 style="color:white">Let's get in touch!</h2>
 								</div>
+								<div class="row">
+								<div id="email" class="col-lg-9 showcase-section-text ">
+									<div class="card-lookalike">
+										<p class="aos-item" data-aos="fade-in" data-aos-anchor="#contact">Email me at:</p>
+										<script type="text/javascript">
+										user = "vrockcm";
+										domain = "gmail.com";
+										document.write('<a href=\"mailto:' + user + '@' + domain + '\"><h2 class="aos-item" data-aos="fade-in" data-aos-anchor="#contact">' + user + '@' + domain + '</h2></a>');
+										</script>						
+										</div>		
+								</div>
+								<div class="col-lg-3">
+									<div class="buttons">
+									<ul class="social-icons">
+							        <li><a href="https://www.instagram.com/vrockcm/"><i class="fab fa-instagram"></i></a></li>
+							        <li><a href="https://www.facebook.com/drsheth"><i class="fab fa-facebook"></i></a></li>
+							        <li><a href="https://www.linkedin.com/in/vrockcm/"><i class="fab fa-linkedin"></i></a></li>
+							        <li><a href="https://github.com/vrockcm"><i class="fab fa-github"></i></a></li>
+							    	</ul>
+							    </div>
 							</div>
 						</div>
-						<div class="spotlight wow fadeInRight">
-							<div class="container-fluid">
-								<div class="row row-height" >
-					 					<div class="col-lg-5 col-lg-push-7 center-block" style="height: auto; padding:30px;">
-					 					<center>
-							 					<div class="js-tilt-no-glare" style="max-width: 300px;">
-								 					<img src="assets/images/S8 IT.png" alt="Phone" style="width: 100%; max-width: 300px;">
-								 				</div>
-								 		</center>
-										</div>
-										<div class="col-lg-7 col-lg-pull-5">
-	  										<div class="wrapper-text text-column-center text_color">
-	  										<div id="head1" class="def-heading">Trip Planner Android Application</div>
-	  										<span id="project2">An android application for planning trips and making itineraries. Download the app <a href="https://drive.google.com/file/d/0B63neicHFSQ0RWQ1ZGRWenB0cG8/view?usp=sharing">here</a>.</span>
-	  								        </div>
-										</div>
-								</div>
-							</div>
-						</div>								
-						
-						<div class="spotlight wow fadeInLeft">
-						   	<div class="container-fluid">
-								<div class="row row-height" >
-					 					<div class="col-lg-5 center-block" style="height: auto; padding:30px;">
-					 						<div class="project-image">
-						 						<div class="js-tilt" data-tilt style="transform-style: preserve-3d">
-						 							<img src="assets/images/cosmic-1.png" alt="Metro Map Maker" style="  box-shadow: 0 20px 27px rgba(0, 0, 0, 0.25);
-						 								width: 100%;"> 
-						 							<img class="center-image" src="assets/images/cosmic_wimpout.png" alt="map" style="width: 100%; display: block; left: 41%; transform: translateZ(50px) translateY(-50%) translateX(-50%) scale(0.8); box-shadow: 0 20px 27px rgba(0, 0, 0, 0.01);
-						 							">
-						 						</div>
-					 						</div>
-										</div>
-	  									<div class="col-lg-7">
-	  										<div class="wrapper-text text-column-center text_color">
-	  										<div id="head1" class="def-heading">Cosmic Wimpout Dice Game</div>
-	  										<span id="project3">Cosmic Wimpout is a two player dice game containing five cosmic wimpout dices where the player plays with a CPU turn-by-turn. You can learn more about the game <a href="http://www.cosmicwimpout.com/p/8/FAQ">here</a> and view my Github Repo <a href="http://https://github.com/vrockcm/cosmic-wimpout">here</a>.</span>
-	  								        </div>
-										</div>
-								</div>
-							</div>
-						</div>
-						<div class="spotlight wow fadeInRight">
-							<div class="container-fluid">
-								<div class="row row-height" >
-					 					<div class="col-lg-5 col-lg-push-7 center-block" style="height: auto; padding:30px;">
-					 					<center>
-							 					<div class="project-image">
-						 						<div class="js-tilt-no-glare" data-tilt style="transform-style: preserve-3d">
-						 							<img src="assets/images/Caper-back.png" alt="Metro Map Maker" style="   box-shadow: 0 20px 27px rgba(0, 0, 0, 0.25); width: 100%;"> 
-						 							<img class="center-image" src="assets/images/Caper-3d.png" alt="map" style="width: 100%; display: block;">
-						 						</div>
-					 						</div>
-								 		</center>
-										</div>
-										<div class="col-lg-7 col-lg-pull-5">
-	  										<div class="wrapper-text text-column-center text_color">
-	  										<div id="head1" class="def-heading">Caper (CTO & CO-FOUNDER)</div>
-	  										<span id="project4">Caper is an events based social networking application exclusively for college students. My friend and I won multiple competitions across New York state with this startup idea, receiving a total of $21,000 from the Research Foundation for SUNY. We have been working on this project ever since. Check it out <a href="http://letscaper.com/">here</a></span>
-	  								        </div>
-										</div>
-								</div>
-							</div>
-						</div>
-						<div class="spotlight wow fadeInLeft">
-						   	<div class="container-fluid">
-								<div class="row row-height" >
-					 					<div class="col-lg-5 center-block" style="height: auto; padding:30px;">
-					 						<div class="project-image">
-						 						<div class="js-tilt" data-tilt style="transform-style: preserve-3d">
-						 							<img src="assets/images/FORMATTER.png" alt="Metro Map Maker" style="box-shadow: 0 20px 27px rgba(0, 0, 0, 0.25); width: 100%;"> 
-						 							<img class="center-image" src="assets/images/JS.png" alt="map" style="width: 100%; display: block; transform: translateZ(50px) translateY(-50%) translateX(-50%) scale(0.8); box-shadow: 0 20px 27px rgba(0, 0, 0, 0.01);
-						 							">
-						 						</div>
-					 						</div>
-										</div>
-	  									<div class="col-lg-7">
-	  										<div class="wrapper-text text-column-center text_color">
-	  										<div id="head1" class="def-heading">Javascript Formatter</div>
-	  										<span id="project5">A JavaScript code cleaner tool which allows you to tidy up and optimize your code. View the <a href="https://github.com/vrockcm/JavaScript-Formatter">Github Repo</a>.</span>
-	  								        </div>
-										</div>
-								</div>
-							</div>
-						</div>
-					</section> 			
-					<section id="achievements" class="wrapper style3 special">
-						<div class="inner wow fadeIn">							
-								<div id="fittext5" class="t" style="padding-bottom: 50px; padding-top: 30px;">ACHIEVEMENTS</div>
-							<ul class="features">
-								<li class="icon fas fa-trophy">
-									<h3><a href="http://www.stonybrook.edu/commcms/sbdc/student-entrepreneur/">Stony Brook Entrepreneur Challenge</a></h3>
-									<p>Our idea Caper took <b>1st Place</b> and we received <b>$15000</b> as prize money. We also got qualified for the Regional Semifinal Competition at Farmingdale State University for NYBPC.</p>
-								</li>
-								<li class="icon fas fa-trophy">
-									<h3><a href="http://www.farmingdale.edu/business/dare.shtml">Long Island Regional Challenge</a></h3>
-									<p>Our idea Caper took <b>1st Place</b> in the Regional Semifinal Competition in the IT/Software catogory and we received <b>$6000</b> as prize money. We also got qualified for the State Final for NYBPC. We were one of the 10 teams that represented Long Island.</p></p>
-								</li>
-								<li class="icon fas fa-chart-line">
-									<h3><a href="http://apply.nybplan.com/">New York Business Plan Competition (NYBPC)</a></h3>
-									<p>We participated in NYBPC competition in Albany hosted by SUNY Polytechnic Institute with our idea Caper. <b>110 teams</b> from institutions in different regions all across New York state participated in the competition.</p>
-								</li>
-								
-								<li class="icon fas fa-car">
-									<h3>R.C Car Design and Race Competition</h3>
-									<p>My team's R.C Car took <b>3rd Place</b>. We had to design the car from scratch and race it on a track with different types of terrain.</p>
-								</li>
-								<li class="icon fas fa-shield-alt">
-									<h3><a href="https://github.com/psusecurity/psusecurity.github.io">Penn State Cybersecurity Competition</a></h3>
-									<p>My team with a total of 2 members took <b>3rd Place</b> out of 16 participants. It was a 10 hr Cyber competition on crash forensics against memory corruption attacks sponsored by <b>Penn State University & NSA</b>. The contest was about finding security loopholes in software. The contest organizers produced a collection of core dumps attributable to real-world memory corruption attacks and our job was to find and pinpoint where exactly these exploits were used to corrupt memory thus locate vulnerability. We also had to perform ret2libc attacks for several challenges.</p>
-								</li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
-							</ul>
-						</div>
-					</section>
+				</div>
+
 					<ul class="bg-bubbles">
-					    <li></li>
-					    <li></li>
-					    <li></li>
-					    <li></li>
-					    <li></li>
-					    <li></li>
-					    <li></li>
-					    <li></li>
-					    <li></li>
-					    <li></li>
-					    <li></li>
-					    <li></li>
-					    <li></li>
+					    <li class="border-change"></li>
+					    <li class="border-change"></li>
+					    <li class="border-change"></li>
+					    <li class="border-change"></li>
+					    <li class="border-change"></li>
+					    <li class="border-change"></li>
+					    <li class="border-change"></li>
+					    <li class="border-change"></li>
+					    <li class="border-change"></li>
+					    <li class="border-change"></li>
+					    <li class="border-change"></li>
+					    <li class="border-change"></li>
+					    <li class="border-change"></li>
 				    </ul>	
 				</div>
+				</div>
 					<footer>
-							<div class="container-fluid">
-								<div class="row" style="height: 100%;">
-  								    <div class="col-xs-12 col-sm-7" style="height: 40%" >
-								        <div class="footer-heading">
-								    		<div id="fittext2" class="t">CONTACT</div>
-								    	</div>
-								     </div>
-								    <div class="col-xs-6 col-sm-3" style="height: 60%">
-
-								    	<div id="buttons" style="padding:10px 10px 10px 10px;  z-index: 2;float:left;  height: 100%;width: 200px;">
-											<ul  class="social-icons icon-circle icon-zoom list-unstyled list-inline img-responsive""> 
-	                                 			<li> <a href="https://www.facebook.com/drsheth" id="facebook-icon" class="img-responsive" ><i class="fab fa-facebook-f"></i>
-	                                 				</a>
-	                                 			<a href="https://www.linkedin.com/in/vrockcm/" id="linkedin-icon" class="img-responsive"><i class="fab fa-linkedin-in"></i>
-	                                 			</a>
-	                                 			</li> 
-	                                 		</ul>
-
-											<ul class="social-icons icon-circle icon-zoom list-unstyled list-inline img-responsive""> 
-	                                 			<li> <a href="https://github.com/vrockcm" id="github-icon" class="img-responsive"><i class="fab fa-github"></i>
-	                                 				</a>
-	                                 			<a href="https://plus.google.com/u/0/102266880356551898896" id="googleplus-icon" class="img-responsive" ><i class="fab fa-google-plus-g"></i>
-	                                 			</a>
-	                                 			</li> 
-	                                 		</ul>
-	                                    </div>
-	                                </div>
-	                                <div class="col-xs-6 col-sm-2" style="height: 60%">
-	                    				<div style="width:100%;height:200px; float: left;">
-	                    					<a href="https://drive.google.com/file/d/0B63neicHFSQ0QjBMOE9NazRtUTg/view?usp=sharing">
-	                                		<figure><img class="img-responsive" id="resume"  src="assets/images/resume.png">
-	                                		</figure>
-	                                		</a>
-	                             		</div>
-	                             	</div>
-								</div>
-							</div>
-							<center>
-							<p class="copyright">&copy; 2018 Dhruv Sheth. All rights reserved</p>
-							</center>
+								<h1 class="thanks">[Thanks for visiting]</h1>
+								<p class="copyright">&copy; 2018 Dhruv Sheth. All rights reserved</p>
 					</footer>					
 				</div>
 			</div>
@@ -334,21 +309,10 @@
 
 		<script type="text/javascript" src="assets/javascripts/main.js"></script>
 
-		<script type="text/javascript" src="assets/javascripts/jquery.fittext.js"></script>
-
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-
-		<script type="text/javascript">
-		$("#fittext2").fitText(1.2, { minFontSize: '35px', maxFontSize: '120px' });
-		$("#fittext3").fitText(1.9, { minFontSize: '20px', maxFontSize: '25px' });
-		$("#fittext4").fitText(1.6, { minFontSize: '50px', maxFontSize: '200px' });
-		$("#fittext1, #fittext5, #fittext6, #fittext7").fitText(1.2, { minFontSize: '30px', maxFontSize: '80px' });
-		$("#project1, #project2, #project3,#project4, #project5").fitText(1.9, { minFontSize: '15px', maxFontSize: '20px' });
-		$("#projectH1, #projectH2, #projectH3,#projectH4, #projectH5").fitText(1.9, { minFontSize: '15px', maxFontSize: '20px' });
-		$("#head1, #head2, #head3").fitText(1.9, { minFontSize: '22px', maxFontSize: '30px' });
-		</script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 		<script>
             $(document).ready(function() {
             //Preloader
@@ -364,10 +328,9 @@
             $('.js-tilt').tilt({
 			    glare: true,
 			    maxGlare:.3,
-			    transition:true,
-			    scale:1.05, 
+			    transition:true, 
 			    maxTilt:10,
-			    perspective: 1000, 
+			    perspective: 1500, 
 		    })
 
             $('.js-tilt-no-glare').tilt({
@@ -376,16 +339,17 @@
 			    perspective: 1000, 
 			})
 
-			wow = new WOW(
-                      {
-                      boxClass:     'wow',      // default
-                      animateClass: 'animated', // default
-                      offset:       0,          // default
-                      mobile:       false,       // default
-                      live:         true        // default
-                    }
-                    )
-                    wow.init();
+			AOS.init({
+			    //AOS.init({
+			     disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+				
+				  // Settings that can be overriden on per-element basis, by `data-aos-*` attributes:
+				  offset: 120, // offset (in px) from the original trigger point
+				  delay: 300, // values from 0 to 3000, with step 50ms
+				  duration: 900, // values from 0 to 3000, with step 50ms
+				  easing: 'ease-in-out-sine', // default easing for AOS animations
+				  once: false, // whether animation should happen only once - while scrolling down
+			});
         </script>
 	</body>
 </html>
