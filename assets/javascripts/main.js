@@ -1,61 +1,84 @@
 $(document).ready(function($) {
   // INITIATE THE FOOTER
-  onScroll();
   siteFooter();  
-    if ($(window).scrollTop() + $(window).height() > $('.wrapper_main').outerHeight()) {
+if(!is_touch_device()){
+  $(".showcase-section-text a").addClass("black");
+    $(window).on("scroll touchmove", function() {
+      if ($(window).scrollTop() + $(window).height()-1 > $('.wrapper_main').outerHeight()) {
+      $('body').addClass('tight');
       $('.arrow').hide();
     }
-$(document.body).on('touchmove', onScroll);
-$(window).on('scroll', onScroll);
-
-function onScroll() {
-      //ADD .TIGHT
-      if ($(window).scrollTop() + $(window).height()-1 > $('.wrapper_main').outerHeight()) {
-        $('body').addClass('tight');
-        $('.arrow').hide();
-      } 
-      else {
-        $('body').removeClass('tight');
-        $('.arrow').show();
-      }
-
-    var navbar = $('.navbar');
-    if($(window).scrollTop() <= 40){
-      navbar.removeClass('navbar-scroll');
-      $('.navbar').css('background', 'rgba(255, 255, 255, 0.0)')
-    } else {
-      navbar.addClass('navbar-scroll');
-      $('.navbar').css('background', '#fff')
+    else {
+      $('body').removeClass('tight');
+      $('.arrow').show();
     }
 
-
-      if ($(document).scrollTop() > $("#contact").position().top- 500) {
-          $('.zind').css('background', $("#about").attr("data-color"));
-          $('.border-change').css('border', '4px solid #fff');
-          $('.navbar-scroll').css('background', $("#showcase").attr("data-color"))
-          $('.nav-link').css('color', $("#about").attr("data-color"))
-          $('.navbar-brand').css('color', $("#about").attr("data-color"))
+    if ($(document).scrollTop() > $("#scroll-point").position().top) {
+              $(".skill").addClass("anima");
+    }
+      var navbar = $('.navbar');
+      if($(window).scrollTop() <= 40){
+        navbar.removeClass('navbar-scroll');
+        $('.navbar').css('background', 'rgba(255, 255, 255, 0.0)')
+      } else {
+        navbar.addClass('navbar-scroll');
+        $('.navbar').css('background', '#fff')
       }
-      else if ($(document).scrollTop() > $("#showcase").position().top-500) {
-          $('.zind').css('background', $("#showcase").attr("data-color"));
-          $('.border-change').css('border', '4px solid #2b2b2b');
-          $('.navbar-scroll').css('background', $("#about").attr("data-color"));
-          $('.nav-link').css('color', $("#showcase").attr("data-color"))
-          $('.navbar-brand').css('color', $("#showcase").attr("data-color"))
-      }
-      else if ($(document).scrollTop() >= $("#about").position().top-500) {
-          $('.zind').css('background', $("#about").attr("data-color"));
-          $('.border-change').css('border', '4px solid #fff');
-          $('.navbar-scroll').css('background', $("#showcase").attr("data-color"))
-          $('.nav-link').css('color', $("#about").attr("data-color"))
-          $('.navbar-brand').css('color', $("#about").attr("data-color"))
-      }
-
-      if ($(document).scrollTop() > $("#scroll-point").position().top) {
-          $(".skill").addClass("anima");
-      }
-    
+        if ($(document).scrollTop() > $("#contact").position().top- 500) {
+            $('.zind').css('background', $("#about").attr("data-color"));
+            $('.border-change').css('border', '4px solid #fff');
+            $('.navbar-scroll').css('background', $("#showcase").attr("data-color"))
+            $('.nav-link').css('color', $("#about").attr("data-color"))
+            $('.navbar-brand').css('color', $("#about").attr("data-color"))
+            if($("nav ul li a").hasClass("white"))
+              $("nav ul li a").removeClass("white");
+            $("nav ul li a").addClass("black");
+        }
+        else if ($(document).scrollTop() > $("#showcase").position().top-500) {
+            $('.zind').css('background', $("#showcase").attr("data-color"));
+            $('.border-change').css('border', '4px solid #2b2b2b');
+            $('.navbar-scroll').css('background', $("#about").attr("data-color"));
+            $('.nav-link').css('color', $("#showcase").attr("data-color"))
+            $('.navbar-brand').css('color', $("#showcase").attr("data-color"))
+            if($("nav ul li a").hasClass("black"))
+              $("nav ul li a").removeClass("black");
+            $("nav ul li a").addClass("white");
+        }
+        else if ($(document).scrollTop() >= $("#about").position().top-500) {
+            $('.zind').css('background', $("#about").attr("data-color"));
+            $('.border-change').css('border', '4px solid #fff');
+            $('.navbar-scroll').css('background', $("#showcase").attr("data-color"))
+            $('.nav-link').css('color', $("#about").attr("data-color"))
+            $('.navbar-brand').css('color', $("#about").attr("data-color"))
+            if($("nav ul li a").hasClass("white"))
+              $("nav ul li a").removeClass("white");
+            $("nav ul li a").addClass("black");
+        }     
+  });
 }
+else{
+  var navbar = $('.navbar');
+  navbar.addClass('navbar-scroll');
+  $('.navbar').css('background', '#fff')
+  $('.showcase-section-text h3').css('color', '#fff')
+  $('.showcase-section-text a').css('color', '#fff')
+  $(".showcase-section-text a").addClass("white");
+}
+
+
+function is_touch_device() {
+  var prefixes = ' -webkit- -moz- -o- -ms- '.split(' ');
+  var mq = function(query) {
+    return window.matchMedia(query).matches;
+  }
+
+  if (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
+    return true;
+  }
+  var query = ['(', prefixes.join('touch-enabled),('), 'heartz', ')'].join('');
+  return mq(query);
+}
+
 
 $(".navbar a").on('click', function(event) {
     if (this.hash !== "") {
@@ -64,7 +87,7 @@ $(".navbar a").on('click', function(event) {
       var hash = this.hash;
       $('html, body').animate({
         scrollTop: $(hash).offset().top-100
-      }, 800, function(){
+      }, 1200, function(){
       });
     }  // End if
   });
@@ -94,11 +117,4 @@ function siteFooter() {
       "margin-bottom" : siteFooterHeight + 49
     });
 }
-
-$('#resume').hover(function(){ 
-            $('#resume').toggleClass("animated jello",function(){
-               $(this).remove();
-            });
-});   
-
 

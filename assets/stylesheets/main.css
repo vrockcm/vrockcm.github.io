@@ -1,6 +1,12 @@
 /* Inserting style for smooth scrolling. */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900');
 
+
+body{
+  background: #2b2b2b;
+  overscroll-behavior:none;
+}
+
 .navbar {
   border-bottom: none;
   padding: 30px;
@@ -95,6 +101,25 @@ nav ul li a::after {
     width: 0;
     height: 3px;
     background: #000;
+    transition: width .3s;
+}
+
+
+nav ul li a.black::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #000;
+    transition: width .3s;
+}
+
+nav ul li a.white::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #fff;
     transition: width .3s;
 }
 
@@ -313,7 +338,7 @@ ul, li {
     color: #000;
 }
 
-.showcase-section-text a::after {
+.showcase-section-text a.black::after {
     content: '';
     display: block;
     width: 0;
@@ -321,6 +346,22 @@ ul, li {
     background: #000;
     transition: width .3s;
 }
+
+
+.showcase-section-text a.white::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #fff;
+    transition: width .3s;
+}
+
+
+
+
+
+
 
 .showcase-section-text a:hover::after {
     color: black;
@@ -395,7 +436,7 @@ h2{
 }
 
 h3{
-    font-size: 36px;
+    font-size: 32px;
 }
 
 h3 span{
@@ -447,7 +488,10 @@ a{
 
 
 
-
+.nice{
+  margin: auto;
+  width: 100%;
+}
 
 
 
@@ -456,6 +500,9 @@ a{
 
 #contact{
   padding:40px;
+  height: 682px;
+  display: flex;
+  align-items: center;
 }
 
 #email{
@@ -646,6 +693,7 @@ margin: 0px;
   margin-bottom: 40px;
   padding: 50px 50px 100px 50px;
   min-height: 100vh;
+  position: relative;
 }
 
 body.tight .wrapper_main {
@@ -678,9 +726,10 @@ body.tight .wrapper_main {
   bottom: 50px;
   left: 50%;
   cursor: pointer;
-  margin-left: -15px;
   width: 20px;
   height: 20px;
+  margin-left: -15px;
+  position: absolute;
   padding: 20px;
   z-index: 99;
   background-color: #ff6347;
@@ -705,6 +754,7 @@ body.tight .wrapper_main {
     transition: background 0.5s ease;
   z-index: 1;
   box-shadow: 0px 22px 54px rgba(0, 0, 0, 0.5);
+
 }
 
 
@@ -1140,7 +1190,7 @@ body.tight .wrapper_main {
     }
 
     .section-showcase ul li.Github {
-        height: 550px; 
+        height: 400px; 
     }
 
     .section-showcase ul li a .placeholder {
@@ -1201,6 +1251,11 @@ body.tight .wrapper_main {
       width: 100%;
   }
     
+    #email .card-lookalike {
+      width: 100%;
+      padding: 30px;
+  }
+
 
     .section-showcase ul li {
         padding-left: 20px;
@@ -1251,9 +1306,6 @@ body.tight .wrapper_main {
 }
 
 @media (max-width: 626px) {
-  .card-lookalike {
-      width: 100%;
-  }
 
   .buttons {
     width: 100%;
@@ -1265,5 +1317,11 @@ body.tight .wrapper_main {
 
   #email a h2{
     font-size: 20px;
+  }
+}
+
+@media (max-width: 440px) {
+   ul.awards li .awards-icon {
+      margin-right: 0px;
   }
 }

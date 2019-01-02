@@ -50,7 +50,7 @@
 				  <div class="collapse navbar-collapse" id="navbarNav">
 				    <ul class="navbar-nav ml-auto">
 				      <li class="nav-item">
-				        <a class="nav-link " href="#about-scroll">About</a>
+				        <a class="nav-link" href="#about-scroll">About</a>
 				      </li>
 				      <li class="nav-item">
 				        <a class="nav-link " href="#achieve">Achievements</a>
@@ -67,9 +67,7 @@
 			</div>
 
 			<div class="wrapper_main">
-				<div class="wrap">	
 				  <div class="arrow animated bounce"></div>
-				</div>
 			</div>
 			
 			<div class="card-lookalike" data-aos="fade-in" id="scroll-point">
@@ -164,7 +162,7 @@
 			                <h1 class="projects-heading">[Projects]</h1>
 			                <ul class="row">
 			                    <li class="col-lg-6 Metro aos-item" data-aos="fade-up">
-			                        <a href="https://github.com/vrockcm/MetroMapMaker" title="">
+			                        <a title="">
 			                            <div>
 			                            	<div class="js-tilt" data-tilt style="transform-style: preserve-3d">
 				                                <div class="placeholder">
@@ -173,7 +171,7 @@
 				                                        <h3>Software Development</h3>
 				                                    </div>
 				                                    <div class="project-thumbnail">
-				                                        <img src="assets/images/MMM.PNG" alt="" class="img-fluid">
+				                                        <img src="assets/images/MMM.png" alt="" class="img-fluid">
 				                                    </div>
 				                                </div>
 				                            </div>
@@ -255,6 +253,7 @@
 			        </div>
 			    </div>
 					<div id="contact" class="container-fluid">
+						<div class="nice">
 								<div class="touch">
 									<h2 style="color:white">Let's get in touch!</h2>
 								</div>
@@ -280,6 +279,7 @@
 							    </div>
 							</div>
 						</div>
+					</div>
 				</div>
 
 					<ul class="bg-bubbles">
@@ -325,19 +325,34 @@
             hidePreloader();
             });
             });
-            $('.js-tilt').tilt({
-			    glare: true,
-			    maxGlare:.3,
-			    transition:true, 
-			    maxTilt:10,
-			    perspective: 1500, 
-		    })
 
-            $('.js-tilt-no-glare').tilt({
-			    scale: 1.05,
-			    maxTilt:15,
-			    perspective: 1000, 
-			})
+            const tilt = $('.js-tilt').tilt();
+
+            function is_touch_device() {
+			  var prefixes = ' -webkit- -moz- -o- -ms- '.split(' ');
+			  var mq = function(query) {
+			    return window.matchMedia(query).matches;
+			  }
+
+			  if (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
+			    return true;
+			  }
+			  var query = ['(', prefixes.join('touch-enabled),('), 'heartz', ')'].join('');
+			  return mq(query);
+			}
+
+            if (!is_touch_device()) {
+	            tilt.tilt({
+				    glare: true,
+				    maxGlare:.3,
+				    transition:true, 
+				    maxTilt:10,
+				    perspective: 1500, 
+			    })
+	        }
+	        else{
+	        	tilt.tilt.destroy.call(tilt);
+	        }
 
 			AOS.init({
 			    //AOS.init({
