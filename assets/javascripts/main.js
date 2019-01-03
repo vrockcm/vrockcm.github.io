@@ -55,10 +55,23 @@ if(!is_touch_device() || $(window).width() > 700){
             if($("nav ul li a").hasClass("white"))
               $("nav ul li a").removeClass("white");
             $("nav ul li a").addClass("black");
-        }     
+        }
+
+      if($(document).scrollTop()  > $('body').height() - $("footer").position().top - 300) {
+        $('footer').addClass("gif");
+      }
+      else
+        $('footer').removeClass("gif");     
   });
 }
 else{
+  $(window).on("scroll touchmove", function(){
+       if($(document).scrollTop()  > $('body').height() - $("footer").position().top - 300) {
+        $('footer').addClass("gif");
+      }
+      else
+        $('footer').removeClass("gif");
+  });
   var navbar = $('.navbar');
   navbar.addClass('navbar-scroll');
   $('.navbar').css('background', '#fff')
@@ -124,7 +137,6 @@ function siteFooter() {
     var siteContent = $('.zind');
     var siteFooter = $('footer');
     var siteFooterHeight = siteFooter.height();
-
     siteContent.css({
       "margin-bottom" : siteFooterHeight + 49
     });
