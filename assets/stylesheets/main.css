@@ -4,7 +4,8 @@
 
 body{
   background: #2b2b2b;
-  overscroll-behavior:contain;
+  overflow: hidden;
+}
 }
 
 .navbar {
@@ -606,6 +607,7 @@ margin: 0px;
   height: 100%;
   width: 100%;
   z-index: 999999;
+
 }
 .clock{
     position: absolute;
@@ -758,7 +760,8 @@ body.tight .wrapper_main {
     transition: background 0.5s ease;
   z-index: 1;
   box-shadow: 0px 22px 54px rgba(0, 0, 0, 0.5);
-
+  overscroll-behavior:contain;
+  -webkit-overflow-scrolling: touch;
 }
 
 

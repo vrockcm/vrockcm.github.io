@@ -26,8 +26,7 @@
 	</head>
 
 	<body data-spy="scroll" data-target=".navbar" data-offset="290">
-		<div class="zind" id="hero" data-aos-easing="ease-in-out-sine" data-aos-duration="900" data-aos-delay="300" data-gr-c-s-loaded="true" class="loaded" style="background:#2b2b2b">
-			<div class="wrapper_pre">
+		<div class="wrapper_pre">
 	        	<div class="clock">
 	          	  <div class="canvas canvas2">
 				    <div class="spinner2"></div>   
@@ -36,6 +35,8 @@
 				  </div>
 				</div>
 			</div>
+		<div class="zind" id="hero" data-aos-easing="ease-in-out-sine" data-aos-duration="900" data-aos-delay="300" data-gr-c-s-loaded="true" class="loaded" style="background:#2b2b2b">
+			
 			<div class="container">
 				<nav class="navbar fixed-top navbar-expand-lg">
 				  <a class="navbar-brand" href="#hero">Dhruv Sheth</a>
@@ -314,21 +315,6 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 		<script>
-            $(document).ready(function() {
-            //Preloader
-	            $(window).on('load', function(){
-		            preloaderFadeOutTime = 500;
-		            function hidePreloader() {
-			            var preloader = $('.wrapper_pre');
-			            preloader.fadeOut(preloaderFadeOutTime);
-		            }
-		            hidePreloader();
-		         });
-	            $(window).bind('unload',function(){
-			    	$('.wrapper_pre').hide();
-				});
-			 });
-
             const tilt = $('.js-tilt').tilt();
 
             function is_touch_device() {
