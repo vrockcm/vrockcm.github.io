@@ -317,13 +317,16 @@
             $(document).ready(function() {
             //Preloader
 	            $(window).on('load', function(){
-		           setTimeout(function(){
-				    $('.wrapper_pre').fadeOut('slow', function() {
-				      $(this).remove();
-				    });
-				   }, 500);
+		            preloaderFadeOutTime = 500;
+		            function hidePreloader() {
+			            var preloader = $('.wrapper_pre');
+			            preloader.fadeOut(preloaderFadeOutTime);
+		            }
+		            hidePreloader();
 		         });
-	            
+	            $(window).bind('unload',function(){
+			    	$('.wrapper_pre').hide();
+				});
 			 });
 
             const tilt = $('.js-tilt').tilt();
