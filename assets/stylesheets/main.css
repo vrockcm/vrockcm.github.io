@@ -5,7 +5,7 @@
 body{
   background: #2b2b2b;
   overflow: hidden;
-}
+  -webkit-overflow-scrolling: touch;
 }
 
 .navbar {
@@ -759,9 +759,8 @@ body.tight .wrapper_main {
     line-height: normal;
     transition: background 0.5s ease;
   z-index: 1;
-  box-shadow: 0px 22px 54px rgba(0, 0, 0, 0.5);
   overscroll-behavior:contain;
-  -webkit-overflow-scrolling: touch;
+  box-shadow: 0px 22px 54px rgba(0, 0, 0, 0.5);
 }
 
 

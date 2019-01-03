@@ -121,7 +121,7 @@ $(window).on('load', function(){
 });
   
 function siteFooter() {
-    var siteContent = $('body');
+    var siteContent = $('.zind');
     var siteFooter = $('footer');
     var siteFooterHeight = siteFooter.height();
 
