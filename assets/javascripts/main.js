@@ -103,13 +103,9 @@ $(window).on('load', function(){
     hidePreloader();
 });
 
-window.onbeforeunload = function() {
+if (window.performance && window.performance.navigation.type == window.performance.navigation.TYPE_BACK_FORWARD) {
   $('.wrapper_pre').fadeOut(500);
 }
-
-/*if (window.performance && window.performance.navigation.type == window.performance.navigation.TYPE_BACK_FORWARD) {
-  $('.wrapper_pre').fadeOut(500);
-}*/
 
 
   //BACK TO PRESENTATION MODE
