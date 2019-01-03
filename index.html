@@ -317,18 +317,13 @@
             $(document).ready(function() {
             //Preloader
 	            $(window).on('load', function(){
-		            preloaderFadeOutTime = 500;
-		            function hidePreloader() {
-		            	alert("SPIN");
-			            var preloader = $('.wrapper_pre');
-			            preloader.fadeOut(preloaderFadeOutTime);
-		            }
-		            hidePreloader();
+		           setTimeout(function(){
+				    $('.wrapper_pre').fadeOut('slow', function() {
+				      $(this).remove();
+				    });
+				   }, 500);
 		         });
-	            $(window).on("pageshow", function(event) {
-	            	alert("IN");
-			    	$('.wrapper_pre').hide();
-				});
+	            
 			 });
 
             const tilt = $('.js-tilt').tilt();
