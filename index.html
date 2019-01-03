@@ -118,7 +118,7 @@
 							<div id="achieve" class="col-lg-5 col-centered">
 								<div class="wrapper-text text-column-center">
 									<h3>Honorable <span> Recognitions & Awards </span></h3>
-									<p>Check my <a href="https://www.linkedin.com/in/vrockcm/">LinkedIn</a> for more details.</p>
+									<p>Check my <a style="color: #007bff;" href="https://www.linkedin.com/in/vrockcm/">LinkedIn</a> for more details.</p>
 								</div>	
 							</div>
 							<div class="col-lg-7 col-centered">
@@ -319,13 +319,15 @@
 	            $(window).on('load', function(){
 		            preloaderFadeOutTime = 500;
 		            function hidePreloader() {
+		            	alert("SPIN");
 			            var preloader = $('.wrapper_pre');
-			            preloader.fadeIn(preloaderFadeOutTime);
+			            preloader.fadeOut(preloaderFadeOutTime);
 		            }
 		            hidePreloader();
 		         });
-	            $(window).bind("pageshow", function(event) {
-			    	$('.wrapper_pre').fadeOut(500);
+	            $(window).on("pageshow", function(event) {
+	            	alert("IN");
+			    	$('.wrapper_pre').hide();
 				});
 			 });
 

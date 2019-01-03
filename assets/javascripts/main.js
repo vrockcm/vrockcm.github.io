@@ -60,6 +60,7 @@ else{
   var navbar = $('.navbar');
   navbar.addClass('navbar-scroll');
   $('.navbar').css('background', '#fff')
+  $('.navbar a').css('color', '#000')
   $('.showcase-section-text h3').css('color', '#fff')
   $('.showcase-section-text a').css('color', '#fff')
   $(".showcase-section-text a").addClass("white");
