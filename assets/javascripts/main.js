@@ -103,7 +103,8 @@ $(window).on('load', function(){
     hidePreloader();
 });
 
-if (window.performance && window.performance.navigation.type == window.performance.navigation.TYPE_BACK_FORWARD) {
+if (!window.performance && window.performance.navigation.type == window.performance.navigation.TYPE_BACK_FORWARD) {
+  $('body').css('overflow', 'auto')
   $('.wrapper_pre').fadeOut(500);
 }
 
