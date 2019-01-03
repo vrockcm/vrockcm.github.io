@@ -536,6 +536,7 @@ footer
   height: 301px;
   background:url("../images/pqdICWJ.gif") no-repeat  50% 0;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .copyright{
