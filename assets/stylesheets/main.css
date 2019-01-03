@@ -536,7 +536,10 @@ footer
   height: 301px;
   background:url("../images/pqdICWJ.gif") no-repeat  50% 0;
   background-size: cover;
-  background-attachment: fixed;
+  -moz-backface-visibility: hidden; 
+  -webkit-backface-visibility: hidden; 
+  backface-visibility: hidden;
+  will-change: transform
 }
 
 .copyright{
